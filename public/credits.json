@@ -1,0 +1,390 @@
+{
+  "project": "HIMAVAT — Indian Himalaya Scrollytelling Field Guide",
+  "lastUpdated": "2026-11-13",
+  "images": [
+    {
+      "slug": "hero-dawn",
+      "category": "stage",
+      "title": "Bethartoli peak from Thaing villgae.jpg",
+      "location": "Garhwal Himalaya, Chamoli, Uttarakhand",
+      "photographer": "Aditya mihir",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bethartoli_peak_from_Thaing_villgae.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4608x2592"
+    },
+    {
+      "slug": "stage-glacier",
+      "category": "stage",
+      "title": "An Icy Road to the Heavens.jpg",
+      "location": "Batalik glacial pass sector, Ladakh",
+      "photographer": "Ogboiz",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_Icy_Road_to_the_Heavens.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "stage-stream",
+      "category": "stage",
+      "title": "Pahalgam Valley.jpg",
+      "location": "Lidder River & Pahalgam Valley, Jammu & Kashmir",
+      "photographer": "KennyOMG",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pahalgam_Valley.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6745x3762"
+    },
+    {
+      "slug": "stage-waterfall",
+      "category": "stage",
+      "title": "Waterfall in dharmashala in mecleod ganj india.jpg",
+      "location": "Bhagsu / McLeod Ganj, Himachal Pradesh",
+      "photographer": "Vikvikas",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Waterfall_in_dharmashala_in_mecleod_ganj_india.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5184x3456"
+    },
+    {
+      "slug": "stage-valley",
+      "category": "stage",
+      "title": "NH505 Spiti Kaza Losar Jun18 D72 7800.jpg",
+      "location": "Spiti River gorge, Lahaul & Spiti, Himachal Pradesh",
+      "photographer": "Timothy Gonsalves",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:NH505_Spiti_Kaza_Losar_Jun18_D72_7800.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "stage-forest",
+      "category": "stage",
+      "title": "Manali mountains view.jpg",
+      "location": "Kullu–Manali Deodar & Pine slope, Himachal Pradesh",
+      "photographer": "Kushavart",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manali_mountains_view.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5184x3456"
+    },
+    {
+      "slug": "stage-camp-night",
+      "category": "stage",
+      "title": "Milky Way (27989026894).jpg",
+      "location": "Night sky over Pangong Tso, Ladakh",
+      "photographer": "Ashwin Kumar from Bangalore, India",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milky_Way_(27989026894).jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4928x3264"
+    },
+    {
+      "slug": "kedarkantha",
+      "category": "trek",
+      "title": "Kedarkantha Peak.jpg",
+      "location": "Govind Wildlife Sanctuary, Uttarkashi, Uttarakhand",
+      "photographer": "Kanthi Kiran",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kedarkantha_Peak.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4928x3264"
+    },
+    {
+      "slug": "hampta-pass",
+      "category": "trek",
+      "title": "Chandra Taal (Lake), HP, India, D35 7255nx-01.jpg",
+      "location": "Chandratal & Hampta corridor, Lahaul & Spiti, Himachal Pradesh",
+      "photographer": "Adarsh Patel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chandra_Taal_(Lake),_HP,_India,_D35_7255nx-01.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "valley-of-flowers",
+      "category": "trek",
+      "title": "Valley of Flowers, Uttarakhand - August 2022 02.jpg",
+      "location": "Valley of Flowers National Park, Chamoli, Uttarakhand",
+      "photographer": "Sudipto2cool",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Flowers,_Uttarakhand_-_August_2022_02.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "8720x4384"
+    },
+    {
+      "slug": "triund",
+      "category": "trek",
+      "title": "Cloud toching THe Mountains.jpg",
+      "location": "Dhauladhar ridge, Triund, Kangra, Himachal Pradesh",
+      "photographer": "Harminder singh saini",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cloud_toching_THe_Mountains.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "3920x2204"
+    },
+    {
+      "slug": "kheerganga",
+      "category": "trek",
+      "title": "Autumn Trees Snow Parbati Himachal Nov21 D72 21229.jpg",
+      "location": "Parvati Valley, Kullu, Himachal Pradesh",
+      "photographer": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autumn_Trees_Snow_Parbati_Himachal_Nov21_D72_21229.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "roopkund",
+      "category": "trek",
+      "title": "Bedini Bugyal 01.jpg",
+      "location": "Bedni Bugyal, Chamoli, Uttarakhand",
+      "photographer": "Shaswat Nimesh",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bedini_Bugyal_01.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5472x3648"
+    },
+    {
+      "slug": "brahmatal",
+      "category": "trek",
+      "title": "Nanda Ghunti Lohajung 2.jpg",
+      "location": "Lohajung / Nanda Ghunti sector, Chamoli, Uttarakhand",
+      "photographer": "Yash Soorma",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanda_Ghunti_Lohajung_2.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5184x3456"
+    },
+    {
+      "slug": "har-ki-dun",
+      "category": "trek",
+      "title": "SWARGAROHINI PEAK.jpg",
+      "location": "Swargarohini massif, Har Ki Dun, Uttarakhand",
+      "photographer": "Govind Shirude",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:SWARGAROHINI_PEAK.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5472x3648"
+    },
+    {
+      "slug": "dayara-bugyal",
+      "category": "trek",
+      "title": "Gidara Bugyal Trek.jpg",
+      "location": "Gidara–Dayara alpine plateau, Uttarkashi, Uttarakhand",
+      "photographer": "Himalayan Dream Treks",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gidara_Bugyal_Trek.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4032x2268"
+    },
+    {
+      "slug": "chopta-chandrashila",
+      "category": "trek",
+      "title": "Deoria tal.jpg",
+      "location": "Deoria Tal & Chaukhamba range, Rudraprayag, Uttarakhand",
+      "photographer": "Rajborah123",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deoria_tal.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "sandakphu",
+      "category": "trek",
+      "title": "Mt kanchenjunga.jpg",
+      "location": "Singalila Ridge / Sandakphu, Darjeeling, West Bengal",
+      "photographer": "Nibeditajha",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mt_kanchenjunga.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    },
+    {
+      "slug": "goecha-la",
+      "category": "trek",
+      "title": "Abhishek532 SamitiReflections.jpg",
+      "location": "Samiti Lake & Mt Pandim, West Sikkim",
+      "photographer": "Abhishek532",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abhishek532_SamitiReflections.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5184x3456"
+    },
+    {
+      "slug": "markha-valley",
+      "category": "trek",
+      "title": "Beyond Chalak (48993473073).jpg",
+      "location": "Markha Valley, Hemis National Park, Ladakh",
+      "photographer": "Chris Hunkeler from Carlsbad, California, USA",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beyond_Chalak_(48993473073).jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "7360x4912"
+    },
+    {
+      "slug": "stok-kangri",
+      "category": "trek",
+      "title": "Viewofleh.jpg",
+      "location": "Leh Valley & Stok Range skyline, Ladakh",
+      "photographer": "Reflectionsbyprajakta",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Viewofleh.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "5737x3705"
+    },
+    {
+      "slug": "pin-parvati-pass",
+      "category": "trek",
+      "title": "Mantalai Lake (Pin Parvati-20000 ft.)-3.jpg",
+      "location": "Mantalai glacier basin, Kullu–Spiti, Himachal Pradesh",
+      "photographer": "Bharatkaistha",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mantalai_Lake_(Pin_Parvati-20000_ft.)-3.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4320x2432"
+    },
+    {
+      "slug": "buran-ghati",
+      "category": "trek",
+      "title": "Highland Meadows in the Western Himalayas-2.jpg",
+      "location": "Buran Valley (Thach meadows), Kinnaur/Pabbar, Himachal Pradesh",
+      "photographer": "Shobhla-Himachal",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Highland_Meadows_in_the_Western_Himalayas-2.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "4624x3468"
+    },
+    {
+      "slug": "kashmir-great-lakes",
+      "category": "trek",
+      "title": "Campsite near Gangabal lake, Jammu and Kashmir, India.jpg",
+      "location": "Trunkhal & Gangabal approach, Ganderbal, Jammu & Kashmir",
+      "photographer": "UnpetitproleX",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campsite_near_Gangabal_lake,_Jammu_and_Kashmir,_India.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "7928x4955"
+    },
+    {
+      "slug": "kuari-pass",
+      "category": "trek",
+      "title": "Nanda Devi peak.jpg",
+      "location": "Nanda Devi Sanctuary skyline, Chamoli, Uttarakhand",
+      "photographer": "Ashwani Kumar",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanda_Devi_peak.jpg",
+      "sourcePlatform": "Wikimedia Commons",
+      "masterResolution": "6000x4000"
+    }
+  ],
+  "audio": [
+    {
+      "slug": "alpine-wind",
+      "title": "245286 dbspin grunewald.wav",
+      "description": "Natural ambient wind recording (CC0 via Freesound / Wikimedia Commons)",
+      "artist": "dbspin",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:245286_dbspin_grunewald.wav"
+    },
+    {
+      "slug": "mountain-water",
+      "title": "433589 jackthemurray stream-river-water-up-close.wav",
+      "description": "Mountain stream / river water close recording (CC0 via Freesound / Wikimedia Commons)",
+      "artist": "jackthemurray",
+      "license": "CC0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:433589_jackthemurray_stream-river-water-up-close.wav"
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Montserrat (700, 900 Black)",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fontsource.org/fonts/montserrat"
+    },
+    {
+      "name": "Cormorant Garamond (400i, 600i)",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fontsource.org/fonts/cormorant-garamond"
+    },
+    {
+      "name": "DM Sans (400, 500, 700)",
+      "license": "SIL Open Font License 1.1",
+      "source": "https://fontsource.org/fonts/dm-sans"
+    }
+  ],
+  "libraries": [
+    {
+      "name": "React & React Router",
+      "license": "MIT",
+      "purpose": "Route-split UI architecture"
+    },
+    {
+      "name": "Vite",
+      "license": "MIT",
+      "purpose": "Zero-cost bundler & optimizer"
+    },
+    {
+      "name": "GSAP + ScrollTrigger",
+      "license": "Standard GreenSock Free License",
+      "purpose": "Scroll choreography & parallax pinning"
+    },
+    {
+      "name": "Lenis",
+      "license": "MIT",
+      "purpose": "Desktop smooth scroll normalization"
+    },
+    {
+      "name": "OGL",
+      "license": "MIT",
+      "purpose": "Lightweight ~10 KB WebGL waterfall & atmosphere shader"
+    },
+    {
+      "name": "detect-gpu",
+      "license": "MIT (self-hosted benchmarks)",
+      "purpose": "Adaptive GPU tier hardware classification"
+    },
+    {
+      "name": "lottie-web (lottie_light)",
+      "license": "MIT",
+      "purpose": "Lazy-loaded alpine compass animation"
+    },
+    {
+      "name": "Lucide Icons",
+      "license": "ISC",
+      "purpose": "Crisp lightweight vector UI iconography"
+    },
+    {
+      "name": "Sharp / libvips (build-time)",
+      "license": "Apache 2.0",
+      "purpose": "AVIF & WebP multi-width responsive encoding"
+    }
+  ]
+}

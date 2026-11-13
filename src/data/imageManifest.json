@@ -1,0 +1,403 @@
+{
+  "hero-dawn": {
+    "slug": "hero-dawn",
+    "widths": [
+      480,
+      960,
+      1920,
+      3840
+    ],
+    "width": 1920,
+    "height": 1080,
+    "aspectRatio": 1.7778,
+    "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAwBACdASoYAA4APt1cpkyopSOiMAgBEBuJZACdMoGv/gJI9rrZe5QcEAAAyeraFL56OVcBToSQ9S4a/AmuBuniPsakoDSyo6R0jpM+a2+TLxE+vP1JvC42Z37sl20dEEQkrzASA3M0/TDkkK1kMe10vzW3NVgQAAA=",
+    "location": "Garhwal Himalaya, Chamoli, Uttarakhand",
+    "photographer": "Aditya mihir",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bethartoli_peak_from_Thaing_villgae.jpg"
+  },
+  "stage-glacier": {
+    "slug": "stage-glacier",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPt1apkyopSOiMAgBEBuJZQAAV4L/xYna4q2QpkTD4ADNwP8aG4wAnS8gdpZx6z+4bsC4pDh10DHbvXCK5VI3I9ndSNX5eecfeiFae6vt+tkbSLkETZrALGbzA8AAAA==",
+    "location": "Batalik glacial pass sector, Ladakh",
+    "photographer": "Ogboiz",
+    "license": "CC0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:An_Icy_Road_to_the_Heavens.jpg"
+  },
+  "stage-stream": {
+    "slug": "stage-stream",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1071,
+    "aspectRatio": 1.7929,
+    "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAADwAwCdASoYAA0APt1apkyopSOiMAgBEBuJaAC7ACIg3s0JFkTh9zcAAP7T6xCg4j3mvysUoQPwI52/KOWcRF66JjLfmoEUVnZSqMtXNEJ7V5+cfsEmVWtLvNXU2Ze6Ubd/W1HEzpRXFioLXuQ/N+15kN8ZH/iIiQWUMzq2VoFSomK21oy7kjqUlxBHlTdpFgAAAA==",
+    "location": "Lidder River & Pahalgam Valley, Jammu & Kashmir",
+    "photographer": "KennyOMG",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pahalgam_Valley.jpg"
+  },
+  "stage-waterfall": {
+    "slug": "stage-waterfall",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAAAwBACdASoYABAAPt1apkyopSOiMAgBEBuJZwAD5XHEKDAPM3SepT40QAAA/t2h/RIPkGFvFXOxENl0x0ofw1doYUJWgmeac9u+7lBeBR9/3o5J0WfQ307gNVxAdUPNAqwmCfhC1SIXcjhDpltNoKuQmoaF5iQ+8VDX/BRqZQY8stdNL+HyanigAAA=",
+    "location": "Bhagsu / McLeod Ganj, Himachal Pradesh",
+    "photographer": "Vikvikas",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Waterfall_in_dharmashala_in_mecleod_ganj_india.jpg"
+  },
+  "stage-valley": {
+    "slug": "stage-valley",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAAAQBACdASoYABAAPt1apkyopSOiMAgBEBuJYwCdACKeuoQo7GPiWjMLiAD+ZoSkNdvRZnll5rH02upncsTpa8mHRxYsgLczcAMpGPbjnEc/etrQ4J0TWnWBVYafDpAls9mry5bYfQWAAA==",
+    "location": "Spiti River gorge, Lahaul & Spiti, Himachal Pradesh",
+    "photographer": "Timothy Gonsalves",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:NH505_Spiti_Kaza_Losar_Jun18_D72_7800.jpg"
+  },
+  "stage-forest": {
+    "slug": "stage-forest",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoYABAAPt1apkyopSOiMAgBEBuJZQCdACGK3CeacVaS887OuYCwAP7nryp/5r8XIeCW2zoQTGHMu1oXFysM2FzIvhDrDztzSIUT2VQSSmCbbluQv4Lj171SHslZp/GRNToXkOLLRinRsgJExd6qWsLgAAA=",
+    "location": "Kullu–Manali Deodar & Pine slope, Himachal Pradesh",
+    "photographer": "Kushavart",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manali_mountains_view.jpg"
+  },
+  "stage-camp-night": {
+    "slug": "stage-camp-night",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1272,
+    "aspectRatio": 1.5098,
+    "lqip": "data:image/webp;base64,UklGRmAAAABXRUJQVlA4IFQAAAAQBACdASoYABAAPt1cqUyopSQiMAgBEBuJZQC06CHhl1FdKLFMY2vjgAD+8NI88xlAYIMbCfsRw7O/i54/fAFt6mX/x5a/StfpmFMg3PA3iN3QcAA=",
+    "location": "Night sky over Pangong Tso, Ladakh",
+    "photographer": "Ashwin Kumar from Bangalore, India",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Milky_Way_(27989026894).jpg"
+  },
+  "kedarkantha": {
+    "slug": "kedarkantha",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1272,
+    "aspectRatio": 1.5098,
+    "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBACdASoYABAAPt1apkyopSOiMAgBEBuJbACdMoMjbEmi91wiI/UC2r71lhAA/oue0OV41z590ozUIWSYnHaSBuW26+zkxB/byiH9x1RfANap/9HixxLjgduWAl1syMbtqgYEVnqcAn0x8EUGRPPOI7Qwhxm03W+gAAAA",
+    "location": "Govind Wildlife Sanctuary, Uttarkashi, Uttarakhand",
+    "photographer": "Kanthi Kiran",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kedarkantha_Peak.jpg"
+  },
+  "hampta-pass": {
+    "slug": "hampta-pass",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAABQBACdASoYABAAPt1apkyopSOiMAgBEBuJaACdMoKBWAgmYp6drS8VWHAoAP3vw5VL69kXC89u/IORs0d9LFZQ0mRfBdtnXcbVZmdFynBqhEV49OidHRi4JvMr/3vxv8m6k9XZCvzl5TmihgUbC+NxBc9RV5ee2mrlMmQ4V5fljRcynyLeK2caAAA=",
+    "location": "Chandratal & Hampta corridor, Lahaul & Spiti, Himachal Pradesh",
+    "photographer": "Adarsh Patel",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chandra_Taal_(Lake),_HP,_India,_D35_7255nx-01.jpg"
+  },
+  "valley-of-flowers": {
+    "slug": "valley-of-flowers",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 965,
+    "aspectRatio": 1.9891,
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAACwAwCdASoYAAwAPt1cp00opSOiMAgBEBuJQAAKVkSV+bN9bEGGAAD+4XBSQZXDlCO5mAFRCWiLDx15wyWPYOQFKmNraoT4TeULLaLgTXwSoyusyuRwZhE26gAAAA==",
+    "location": "Valley of Flowers National Park, Chamoli, Uttarakhand",
+    "photographer": "Sudipto2cool",
+    "license": "CC BY 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Valley_of_Flowers,_Uttarakhand_-_August_2022_02.jpg"
+  },
+  "triund": {
+    "slug": "triund",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "aspectRatio": 1.7786,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAAAwBACdASoYAA0APt1cp00opSOiMAgBEBuJZQCsACHeg7n8TJrw1x6c/QAA/uF6ao9uDWWs54gZ/Ofjh3vQc0GHZyqgWEe4K7v9GPLpKTgTx0TLB0k/ysiQikwRBF0hlEaAAA==",
+    "location": "Dhauladhar ridge, Triund, Kangra, Himachal Pradesh",
+    "photographer": "Harminder singh saini",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Cloud_toching_THe_Mountains.jpg"
+  },
+  "kheerganga": {
+    "slug": "kheerganga",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAAAwBACdASoYABAAPt1apkyopSOiMAgBEBuJbACdAB6UoFW/X6YAOYUwhKAA+N24VW3wyLP8kTs59/tsTlr4sGUSFhNOiYejWSNz8s8GnvWf9WIDZKps0HQbHRaiG6Oml9ZeUMfesds0IzTCrAzrc7+sgU8aJZSLWMQLrwAA",
+    "location": "Parvati Valley, Kullu, Himachal Pradesh",
+    "photographer": "This Photo was taken by Timothy A. Gonsalves.  Feel free to use my photos, but please mention me as the author.  I would",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Autumn_Trees_Snow_Parbati_Himachal_Nov21_D72_21229.jpg"
+  },
+  "roopkund": {
+    "slug": "roopkund",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAAAQBACdASoYABAAPt1apkyopSOiMAgBEBuJbACw7CIGC6BALHYOrxRcAAD+IxYhF/LW4UrVUyOSIl6uVlhOV445zXxAWdE8ivyz3aIlJ0hnMWgdkKxcviR/t6qRkXlpb9F7Ym1a//+bmvBycyppjU1em/cNoEWY+9dsXsjZlPdGl92nHIYLTQOPC0QwdF8BGRzrSYwVkZZ+czggf9xxuuDE/8BlF+mIfdAAAA==",
+    "location": "Bedni Bugyal, Chamoli, Uttarakhand",
+    "photographer": "Shaswat Nimesh",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Bedini_Bugyal_01.jpg"
+  },
+  "brahmatal": {
+    "slug": "brahmatal",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoYABAAPt1kqU2opaQiMAgBEBuJZQAAW+s39CscZ+JC8AD+68qOpi/f6Xy1wkEBhT9G8eHdcJsPEXVY50AwAA==",
+    "location": "Lohajung / Nanda Ghunti sector, Chamoli, Uttarakhand",
+    "photographer": "Yash Soorma",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanda_Ghunti_Lohajung_2.jpg"
+  },
+  "har-ki-dun": {
+    "slug": "har-ki-dun",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRqAAAABXRUJQVlA4IJQAAADwAwCdASoYABAAPt1apkyopSOiMAgBEBuJQBOgMYdb+msR7wLvTQXAAPGLXonxppxaDUBte0ODrPRhII4WXvsOA5Uh9mNbt00Zx7/CQTRtQGQBq0ZPEXSLCdueSJ1hxxsVNrM/pnaDhP6nDKkJiVtJPQd4Yt1c6PAe1wwEpg5RRDkOB1rXbZSeGHVW70c/T3xzuAAA",
+    "location": "Swargarohini massif, Har Ki Dun, Uttarakhand",
+    "photographer": "Govind Shirude",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:SWARGAROHINI_PEAK.jpg"
+  },
+  "dayara-bugyal": {
+    "slug": "dayara-bugyal",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1080,
+    "aspectRatio": 1.7778,
+    "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwAwCdASoYAA4APt1apkyopSOiMAgBEBuJbACdMoAC9mH2srRwmxXYAPfM6tBW1YcR9pI7m9h4LmmwAi2K67Nhpz74SoVvAiyLBwX6/Nhz+br7r0Rpn/wd+H3XgWtwMnwNbGRxMtUKJ4sU0/NDsSOq2imLCs3jZz+n2Sp8c4O+6eWny+eAAA==",
+    "location": "Gidara–Dayara alpine plateau, Uttarkashi, Uttarakhand",
+    "photographer": "Himalayan Dream Treks",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gidara_Bugyal_Trek.jpg"
+  },
+  "chopta-chandrashila": {
+    "slug": "chopta-chandrashila",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoYABAAPt1cpkyopSOiMAgBEBuJQBOmUGVsh+9HA26s8ulEDZZpHGAA/eMdDuzhrrEkwo5k3O1fHt8PhkWigBYXjwW5hGg/Y6qP9ORTbqTyEes8LdHnV7XY71RI6iuW/JZjhW3nXQXfQ8pBCjZ93erfVxbg8hfMVjDj6cd3k94zAALiu+U8xnAA",
+    "location": "Deoria Tal & Chaukhamba range, Rudraprayag, Uttarakhand",
+    "photographer": "Rajborah123",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deoria_tal.jpg"
+  },
+  "sandakphu": {
+    "slug": "sandakphu",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAAAQBACdASoYABAAPt1cp0yopSOiMAgBEBuJZgCw/f/gNlGtkaCkEDxQmADxyNqoAM4q5TePdzUm3T2zmdOLIzz4u7D8mzxT5t5GdiNzBPNSk+Nq0CIV9TgMQyMUZaoFsJsp7Q2Xq0o3/kHXn+WAAA==",
+    "location": "Singalila Ridge / Sandakphu, Darjeeling, West Bengal",
+    "photographer": "Nibeditajha",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mt_kanchenjunga.jpg"
+  },
+  "goecha-la": {
+    "slug": "goecha-la",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAADwBACdASoYABAAPt1apkyopSOiMAgBEBuJbACdMoR3HvNH4AQSDwRv4bnVXIzf5AAAy0M0pU03cOUKTS0CD06ES7erDyO05Px8vKTof6MrIylaj3Fr316DL9l55L96nfgXzJL9KmgO3QXBrWwnMbOI/9bpqAfhHDrhFjdrEmam7g9+EgFWjJuE+pI1hQ1c+8ZFYjEHTI3jV9oPyKlQn8D90160dd7Wt/ENA+NAAAA=",
+    "location": "Samiti Lake & Mt Pandim, West Sikkim",
+    "photographer": "Abhishek532",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Abhishek532_SamitiReflections.jpg"
+  },
+  "markha-valley": {
+    "slug": "markha-valley",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1281,
+    "aspectRatio": 1.4984,
+    "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAACwBACdASoYABAAPt1apkyopSOiMAgBEBuJYgCdBrANwFwYt6t06BXamwy+gGfAAP5GcP4Ptr6Jy2pvp8vjR8isM8DWzpM2Z3WovFr6sEupBBjRchGm6ko9di2FPFvPQjTI4uLIQNSbYuUJ4JlR9b6X3L4laCJOEiWpNjY/w2HlgJ3nvwqcOnl01JwjzWZ0RyYAIOABnyVsfoEYAAA=",
+    "location": "Markha Valley, Hemis National Park, Ladakh",
+    "photographer": "Chris Hunkeler from Carlsbad, California, USA",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beyond_Chalak_(48993473073).jpg"
+  },
+  "stok-kangri": {
+    "slug": "stok-kangri",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1240,
+    "aspectRatio": 1.5484,
+    "lqip": "data:image/webp;base64,UklGRqwAAABXRUJQVlA4IKAAAABQBQCdASoYAA8APt1apkyopSOiMAgBEBuJbACdMoRwN4BTAdUa3/2KADyKLtRS1qsoj4AA8apmHP0Y8cNwIM5vIo77pfq9gnOysMotjSFk3JlXdkLyU0Z8+0oXfVqLL/LkQSB0Zyi3CCKicvIU+T5+nTvJfdhZr3oc6R+ky8JMUIA9p1rOKU+nWoQ5Hj6ictdfRDYprhBjY7jzLtx+IAAA",
+    "location": "Leh Valley & Stok Range skyline, Ladakh",
+    "photographer": "Reflectionsbyprajakta",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Viewofleh.jpg"
+  },
+  "pin-parvati-pass": {
+    "slug": "pin-parvati-pass",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1081,
+    "aspectRatio": 1.7763,
+    "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAADQAwCdASoYAA4APt1apkyopSOiMAgBEBuJZQAAW50fB0TRck2ov+gA/h/ZLQKxXdLKYX2sLSaysEiiQuRk2l4Zj/g5vWen3kiWftzPpwqF7LVTaWlSVXAqp6Dnte4emT8W7iY6/7RxfeiFyMJz5DeyqvbxfjgAAAA=",
+    "location": "Mantalai glacier basin, Kullu–Spiti, Himachal Pradesh",
+    "photographer": "Bharatkaistha",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mantalai_Lake_(Pin_Parvati-20000_ft.)-3.jpg"
+  },
+  "buran-ghati": {
+    "slug": "buran-ghati",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1440,
+    "aspectRatio": 1.3333,
+    "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAACwBACdASoYABIAPt1ep04opSOiMBgIARAbiWIArAAQ6Nv+Hv5IGHHMBmVU2TLAAP7fUgMqKH7xYcGHuKOngd1eNdarJlN4qG/H/A7nWBnM+vPyBGpu5qtxz62Kl0f1byQWxTTbDgxYyQ6rXfrxMYVXBzgAAA==",
+    "location": "Buran Valley (Thach meadows), Kinnaur/Pabbar, Himachal Pradesh",
+    "photographer": "Shobhla-Himachal",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Highland_Meadows_in_the_Western_Himalayas-2.jpg"
+  },
+  "kashmir-great-lakes": {
+    "slug": "kashmir-great-lakes",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1200,
+    "aspectRatio": 1.6,
+    "lqip": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAACQBACdASoYAA8APt1apkyopSOiMAgBEBuJaACdLwDs/wFQbhMie1hk8ivjJcAA/lth53zWTILvSywBwTOifqD9apoHIz/drLCFbcABeA7P0zvxwU36ULFMmWvaflpw2aUQtCuCbwZT/TZwmkE6boQ3uhC/GZ4GAqfsn8XEtsiNErDAAAA=",
+    "location": "Trunkhal & Gangabal approach, Ganderbal, Jammu & Kashmir",
+    "photographer": "UnpetitproleX",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Campsite_near_Gangabal_lake,_Jammu_and_Kashmir,_India.jpg"
+  },
+  "kuari-pass": {
+    "slug": "kuari-pass",
+    "widths": [
+      480,
+      960,
+      1920
+    ],
+    "width": 1920,
+    "height": 1280,
+    "aspectRatio": 1.5,
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAAAQBACdASoYABAAPt1apkyopSOiMAgBEBuJZACdMoAC+tkaXybMQ+e4QAD8gquRoEIvZDOZeWsznCFTkvd2UoT6rYToez72Tplv3ddAmwsOi6l7Du8uNDPC7GivZj08XWvuugAA",
+    "location": "Nanda Devi Sanctuary skyline, Chamoli, Uttarakhand",
+    "photographer": "Ashwani Kumar",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nanda_Devi_peak.jpg"
+  }
+}

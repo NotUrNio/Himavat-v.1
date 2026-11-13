@@ -1,0 +1,37 @@
+:root {
+  /* Core Alpine Palette (HSL tuned, strictly no purple-on-dark tropes) */
+  --bg-summit: #0b1117;
+  --bg-glacier: #0d1720;
+  --bg-waterfall: #081217;
+  --bg-forest: #0a1510;
+  --bg-camp: #06090f;
+
+  --surface-elevated: rgba(16, 25, 34, 0.84);
+  --surface-card: #121c25;
+  --surface-panel: #16222c;
+
+  --ink-primary: #f2f5f7;
+  --ink-secondary: #b9c5cf;
+  --ink-muted: #8a99a8;
+
+  --accent-dawn: #df7b42;       /* Alpenglow terracotta copper */
+  --accent-glacier: #59b3c4;    /* Mineral glacial meltwater */
+  --accent-forest: #71a87e;     /* Himalayan cedar moss */
+  --accent-ember: #e39b4f;      /* Warm camp lantern amber */
+  --accent-warn: #e06458;       /* Conservative safety/closure warning */
+
+  --border-subtle: rgba(215, 229, 239, 0.13);
+  --border-strong: rgba(215, 229, 239, 0.28);
+
+  --font-display: 'Montserrat', 'Montserrat Fallback', 'Arial Black', Impact, sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Cormorant Fallback', Georgia, serif;
+  --font-sans: 'DM Sans', 'DM Sans Fallback', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --container-max: 1360px;
+  --nav-height: 68px;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}

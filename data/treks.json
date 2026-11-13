@@ -1,0 +1,1190 @@
+{
+  "meta": {
+    "title": "HIMAVAT — Indian Himalaya Field Trekking Dataset",
+    "lastChecked": "2026-11-13",
+    "priceDisclaimer": "All operator package ranges and DIY estimates are approximate, checked Nov 13, 2026. Confirm permit tariffs at district forest/tourism checkposts before departure.",
+    "currency": "INR",
+    "sources": [
+      {
+        "name": "Trek The Himalayas — Trek itineraries & tariffs",
+        "url": "https://trekthehimalayas.com/",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Bikat Adventures — Trek specifications & BRS grading",
+        "url": "https://www.bikatadventures.com/",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Youth Hostels Association of India (YHAI) — National Himalayan Programs",
+        "url": "https://www.yhaindia.org/all-programs?type=National%20Program",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "TrekBaba — Normalized trail telemetry & captured multi-operator pricing",
+        "url": "https://trekbaba.com/",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Sikkim Tourism & Civil Aviation Department (RAP/PAP rules)",
+        "url": "https://sikkimtourism.gov.in/pap",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Uttarakhand Forest Department Single Window / Park Portal",
+        "url": "https://www.ukfdonline.com/",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Himalayan Locals / Travel Coffee / Refuje (2026 HP permit & closure updates)",
+        "url": "https://refuje.com/blog/triund-trek-complete-beginners-guide",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Wilderness Medical Society (2024 Acute Altitude Illness Guidelines)",
+        "url": "https://wms.org/magazine/magazine/1463/2024-Altitude-Summary/default.aspx",
+        "checked": "2026-11-13"
+      },
+      {
+        "name": "Wikipedia — Indian Himalayan Trails Reference Articles",
+        "url": "https://en.wikipedia.org/wiki/Great_Lakes_Trek",
+        "checked": "2026-11-13"
+      }
+    ]
+  },
+  "treks": [
+    {
+      "id": "kedarkantha",
+      "slug": "kedarkantha",
+      "name": "Kedarkantha Peak",
+      "tagline": "360-degree snow ridge summit rising from oak meadows above Sankri",
+      "state": "Uttarakhand",
+      "region": "Govind Wildlife Sanctuary, Garhwal",
+      "altitudeM": 3810,
+      "altitudeFt": 12500,
+      "distanceKm": 20,
+      "daysMin": 5,
+      "daysMax": 6,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Open year-round except peak monsoon cloud cover; Sankri–Naitwar corridor gets busy Dec–Jan weekends.",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar", "Apr"],
+      "shoulderMonths": ["May", "Oct", "Nov"],
+      "avoidMonths": ["Jun", "Jul", "Aug", "Sep"],
+      "permits": {
+        "required": true,
+        "authority": "Govind Wildlife Sanctuary (Uttarakhand Forest Dept)",
+        "indianFeeInr": 200,
+        "foreignFeeInr": 600,
+        "notes": "Entry fee covers initial 3D/2N window (~INR 200 Indian / INR 600 Foreign + ~INR 50–250/extra day) plus refundable clean-trail security deposit."
+      },
+      "roadhead": "Sankri (1,950 m) — 200 km / ~8–9 hr from Dehradun",
+      "nearestRail": "Dehradun Railway Station",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Frozen pine-ringed Juda ka Talab basin at 2,780 m",
+        "Pre-dawn lantern ascent along an open 3,810 m ridgeline",
+        "Clear panoramas of Swargarohini, Bandarpoonch, and Black Peak (Kalanag)",
+        "Dense deodar, brown oak, and rhododendron belts below 3,100 m"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Dehradun to Sankri", "altitudeM": 1950, "distanceKm": 0 },
+        { "day": 2, "camp": "Sankri to Juda ka Talab", "altitudeM": 2780, "distanceKm": 4.5 },
+        { "day": 3, "camp": "Juda ka Talab to Base Camp", "altitudeM": 3430, "distanceKm": 4.0 },
+        { "day": 4, "camp": "Summit (3,810 m) & Hargaon", "altitudeM": 3810, "distanceKm": 6.5 },
+        { "day": 5, "camp": "Hargaon to Sankri", "altitudeM": 1950, "distanceKm": 5.0 },
+        { "day": 6, "camp": "Sankri to Dehradun", "altitudeM": 640, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 5238,
+        "max": 21999,
+        "yhaiApprox": 10000,
+        "typical": 11250,
+        "operatorsSampled": ["YHAI", "Bikat Adventures", "Trek The Himalayas", "Indiahikes", "Trekkers of India"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1400,
+        "stayPerDay": 550,
+        "foodPerDay": 450,
+        "permitTotal": 300,
+        "guidePerDay": 1500,
+        "gearRentalPerDay": 350,
+        "notes": "Shared bus/Sumo Dehradun -> Purola -> Sankri (~INR 600–750 each way). Homestays/dhaba huts in Sankri are plentiful."
+      },
+      "summary": "A classic winter and spring summit route in Uttarkashi where short daily trail distances still build significant elevation over four days. Ideal for prepared beginners seeking true snow-ridge walking.",
+      "imageSlug": "kedarkantha",
+      "sources": ["https://trekthehimalayas.com/kedarkantha-trek", "https://www.yhaindia.org/program-details/2400002/national-himalayan-kedarkantha-winter-trekking-cum-training-expedition-202627", "https://trekbaba.com/"]
+    },
+    {
+      "id": "hampta-pass",
+      "slug": "hampta-pass",
+      "name": "Hampta Pass & Chandratal",
+      "tagline": "Dramatic ecological divide linking lush Kullu meadows with barren Lahaul spires",
+      "state": "Himachal Pradesh",
+      "region": "Pir Panjal, Kullu / Lahaul-Spiti",
+      "altitudeM": 4270,
+      "altitudeFt": 14009,
+      "distanceKm": 26,
+      "daysMin": 5,
+      "daysMax": 6,
+      "difficulty": "Moderate",
+      "status": "open",
+      "statusNote": "Jul–Aug brings slippery scree & glacial river swells across Balu ka Ghera–Shea Ghoru; June & September offer clearest crossings.",
+      "bestMonths": ["Jun", "Sep"],
+      "shoulderMonths": ["Jul", "Aug", "Oct"],
+      "avoidMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "permits": {
+        "required": false,
+        "authority": "HP Forest / Lahaul Checkpost (Chandratal vehicle permit if driving)",
+        "indianFeeInr": 100,
+        "foreignFeeInr": 100,
+        "notes": "No paid trail entry fee for Indian foot trekkers; valid govt ID mandatory at Chatru/Jobra checkposts and green tax (~INR 100–200) if vehicles enter Spiti."
+      },
+      "roadhead": "Jobra (2,980 m) via Manali hairpin road",
+      "nearestRail": "Joginder Nagar / Chandigarh",
+      "nearestAirport": "Bhuntar Airport, Kullu (KUU)",
+      "highlights": [
+        "Instant vegetation shift crossing the 4,270 m Pir Panjal saddle into arid Lahaul",
+        "Knee-deep cold stream wading near Shea Ghoru campsite",
+        "Glacial boulders and river plains at Chika & Balu ka Ghera",
+        "Optional crescent-lake excursion to Chandratal (4,250 m)"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Manali to Jobra -> Chika", "altitudeM": 3080, "distanceKm": 2.5 },
+        { "day": 2, "camp": "Chika to Balu ka Ghera", "altitudeM": 3620, "distanceKm": 8.5 },
+        { "day": 3, "camp": "Balu ka Ghera to Shea Ghoru via Pass", "altitudeM": 4270, "distanceKm": 8.0 },
+        { "day": 4, "camp": "Shea Ghoru to Chatru (+Chandratal)", "altitudeM": 3320, "distanceKm": 7.0 },
+        { "day": 5, "camp": "Chatru to Manali drive", "altitudeM": 2050, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 4499,
+        "max": 19500,
+        "yhaiApprox": 9500,
+        "typical": 11500,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures", "Indiahikes", "YHAI", "Himalaya Shelter"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1800,
+        "stayPerDay": 400,
+        "foodPerDay": 500,
+        "permitTotal": 100,
+        "guidePerDay": 1600,
+        "gearRentalPerDay": 400,
+        "notes": "HRTC/shared cab Manali -> Prini -> Jobra and return Chatru -> Manali via Atal Tunnel."
+      },
+      "summary": "Few trails pack such stark contrast into 26 km: green maple-walnut groves above Manali give way over a steep boulder pass into the stark desert valleys of Lahaul.",
+      "imageSlug": "hampta-pass",
+      "sources": ["https://www.bikatadventures.com/Home/Itinerary/Hampta-Pass-Chandratal-Lake-Trek", "https://trekthehimalayas.com/hampta-pass-trek", "https://www.yhaindia.org/program-details/1650004/hampta-pass-chandratal-trekking-2026"]
+    },
+    {
+      "id": "valley-of-flowers",
+      "slug": "valley-of-flowers",
+      "name": "Valley of Flowers & Hemkund",
+      "tagline": "UNESCO biosphere valley carpeting Pushpawati gorge in sub-alpine monsoon blooms",
+      "state": "Uttarakhand",
+      "region": "Nanda Devi Biosphere Reserve, Chamoli",
+      "altitudeM": 3658,
+      "altitudeFt": 12001,
+      "distanceKm": 38,
+      "daysMin": 6,
+      "daysMax": 6,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Open ~June 1 to Oct 4 annually; entry closed inside park after 2 PM and no overnight camping allowed inside the valley.",
+      "bestMonths": ["Jul", "Aug"],
+      "shoulderMonths": ["Jun", "Sep"],
+      "avoidMonths": ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "permits": {
+        "required": true,
+        "authority": "Nanda Devi National Park / Forest Checkpost, Ghangaria",
+        "indianFeeInr": 200,
+        "foreignFeeInr": 800,
+        "notes": "Day entry permit capped (~300 visitors/day) issued at Ghangaria; Hemkund Sahib pilgrimage registration also mandatory via Uttarakhand govt portal."
+      },
+      "roadhead": "Govindghat / Poolna (~1,850 m) from Rishikesh (270 km)",
+      "nearestRail": "Rishikesh / Haridwar",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Hundreds of endemic orchid, blue poppy, and brahma kamal blooms mid-July to August",
+        "Strict day-use valley trail preserving fragile alpine meadows from Ghangaria base",
+        "Stone-paved Laxman Ganga gorge climb alongside cascading monsoon falls",
+        "Acclimatization hike option to Hemkund Sahib glacial tarn (~4,328 m)"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Rishikesh to Joshimath/Govindghat", "altitudeM": 1890, "distanceKm": 0 },
+        { "day": 2, "camp": "Poolna to Ghangaria", "altitudeM": 3048, "distanceKm": 9.5 },
+        { "day": 3, "camp": "Valley of Flowers Day Loop", "altitudeM": 3658, "distanceKm": 10.0 },
+        { "day": 4, "camp": "Ghangaria to Hemkund Sahib", "altitudeM": 4328, "distanceKm": 11.0 },
+        { "day": 5, "camp": "Ghangaria to Govindghat", "altitudeM": 1850, "distanceKm": 9.5 },
+        { "day": 6, "camp": "Drive to Rishikesh", "altitudeM": 372, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 5300,
+        "max": 32499,
+        "yhaiApprox": 9900,
+        "typical": 12450,
+        "operatorsSampled": ["YHAI", "Trek The Himalayas", "Indiahikes", "Trekveda"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1600,
+        "stayPerDay": 700,
+        "foodPerDay": 550,
+        "permitTotal": 300,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 150,
+        "notes": "Easy DIY route: permanent dharamsalas/guesthouses in Ghangaria and clear cobblestone trail require no guide for standard day walks."
+      },
+      "summary": "A heritage biodiversity sanctuary accessed from Ghangaria where trekkers stay in lodges rather than tents, exploring fresh alpine flora daily before returning below treeline.",
+      "imageSlug": "valley-of-flowers",
+      "sources": ["https://www.yhaindia.org/program-details/1650011/valley-of-flowers-trekking-2026", "https://trekthehimalayas.com/valley-of-flowers-trek", "https://trekbaba.com/"]
+    },
+    {
+      "id": "triund",
+      "slug": "triund",
+      "name": "Triund Ridge",
+      "tagline": "Steep 22-switchback climb to a grassy crest beneath Dhauladhar granite spires",
+      "state": "Himachal Pradesh",
+      "region": "Dhauladhar Range, Kangra",
+      "altitudeM": 2850,
+      "altitudeFt": 9350,
+      "distanceKm": 18,
+      "daysMin": 1,
+      "daysMax": 2,
+      "difficulty": "Easy",
+      "status": "restricted",
+      "statusNote": "HP High Court & Forest Dept enforce a 400 trekkers/day & 20-tent limit at Gallu Devi checkpost; day hikers face ~11:30 AM entry cutoff.",
+      "bestMonths": ["Mar", "Apr", "May", "Jun", "Sep", "Oct"],
+      "shoulderMonths": ["Nov"],
+      "avoidMonths": ["Jul", "Aug", "Jan", "Feb"],
+      "permits": {
+        "required": true,
+        "authority": "HP Forest Department Checkpost (Gallu Devi / Indru Nag)",
+        "indianFeeInr": 100,
+        "foreignFeeInr": 100,
+        "notes": "Day entry ~INR 100; legal overnight pitch fee ~INR 550 per 2-person tent (capped at 20 tents ridge-wide)."
+      },
+      "roadhead": "McLeod Ganj / Gallu Devi Temple (2,130 m)",
+      "nearestRail": "Pathankot Cantt (PTKC)",
+      "nearestAirport": "Kangra Gaggal Airport (DHM)",
+      "highlights": [
+        "Immediate dramatic wall view of Moon Peak and Dhauladhar ridge",
+        "Shade through oak and cedar slopes above Dharamkot",
+        "Short weekend format reachable overnight by Volvo from Delhi",
+        "Optional snow-line day walk toward Lahesh Cave (3,550 m)"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Gallu Devi -> Magic View -> Triund", "altitudeM": 2850, "distanceKm": 6.5 },
+        { "day": 2, "camp": "Triund to McLeod Ganj descent", "altitudeM": 2080, "distanceKm": 9.0 }
+      ],
+      "operatorCostInr": {
+        "min": 1899,
+        "max": 5954,
+        "yhaiApprox": null,
+        "typical": 2500,
+        "operatorsSampled": ["Moxtain", "Himalayan High", "Trekhievers", "Himalayan Hikers", "TrekBaba"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 500,
+        "stayPerDay": 400,
+        "foodPerDay": 400,
+        "permitTotal": 375,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 200,
+        "notes": "Self-guided route on marked trail; arrive at Gallu Devi checkpost before 8:30 AM to beat quota cutoff."
+      },
+      "summary": "Northern India's classic first ridge walk above Dharamshala. Simple navigation and well-worn stone steps hide a steady 750 m climb in the final 22 switchbacks.",
+      "imageSlug": "triund",
+      "sources": ["https://trekbaba.com/trek/triund", "https://refuje.com/blog/triund-trek-complete-beginners-guide", "https://travelcoffee.in/blog/triund-trek-guide"]
+    },
+    {
+      "id": "kheerganga",
+      "slug": "kheerganga",
+      "name": "Kheerganga Trail",
+      "tagline": "Forest riverside ascent through Barshaini waterfalls and geothermal Parvati springs",
+      "state": "Himachal Pradesh",
+      "region": "Parvati Valley, Kullu",
+      "altitudeM": 2960,
+      "altitudeFt": 9711,
+      "distanceKm": 24,
+      "daysMin": 1,
+      "daysMax": 2,
+      "difficulty": "Easy-Moderate",
+      "status": "restricted",
+      "statusNote": "CRITICAL RULE (July 2024 – 2026): Overnight camping at Kheerganga meadow is banned by HP Forest Dept; stay in Kalga, Pulga, Nakthan, or Tosh homestays.",
+      "bestMonths": ["May", "Jun", "Sep", "Oct", "Nov"],
+      "shoulderMonths": ["Mar", "Apr"],
+      "avoidMonths": ["Jul", "Aug", "Jan", "Feb"],
+      "permits": {
+        "required": true,
+        "authority": "HP Forest Dept Barrier (Barshaini / Icy Point)",
+        "indianFeeInr": 100,
+        "foreignFeeInr": 100,
+        "notes": "Barshaini checkpost logs photo ID (~INR 100) and enforces strict up-before-10 AM / descend-by-2 PM day-trek curfew."
+      },
+      "roadhead": "Barshaini (2,200 m) — 16 km uphill from Kasol",
+      "nearestRail": "Joginder Nagar / Chandigarh",
+      "nearestAirport": "Bhuntar Airport, Kullu (KUU)",
+      "highlights": [
+        "Thundering Rudra Nag serpent cascade midway up the gorge",
+        "Sacred geothermal sulphur springs at 2,960 m overlooking snow ribs",
+        "Option to loop out via forested Pulga Fairy Forest & wooden bridges",
+        "Authentic wooden mountain homestays in Nakthan and Kalga"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Barshaini -> Nakthan -> Kheerganga -> Kalga", "altitudeM": 2960, "distanceKm": 24.0 }
+      ],
+      "operatorCostInr": {
+        "min": 1099,
+        "max": 4500,
+        "yhaiApprox": null,
+        "typical": 2200,
+        "operatorsSampled": ["TrekBaba", "Himsafar", "Travel Coffee"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 600,
+        "stayPerDay": 550,
+        "foodPerDay": 450,
+        "permitTotal": 100,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 150,
+        "notes": "Verify any operator NOT pitching tents illegally atop the meadow; stay legally in Kalga/Tosh guesthouses instead."
+      },
+      "summary": "Following strict 2024 eco-protection orders banning meadow camps, Kheerganga has transformed into a rewarding early-start day hike out of Parvati valley wooden villages.",
+      "imageSlug": "kheerganga",
+      "sources": ["https://travelcoffee.in/places-to-visit/kheerganga", "https://www.himsafar.in/blog/kheerganga-trek-from-kasol-day-trek-guide", "https://www.trekyatra.co.in/trek/kheerganga"]
+    },
+    {
+      "id": "roopkund",
+      "slug": "roopkund",
+      "name": "Roopkund (Mystery Lake) Sector",
+      "tagline": "Sweeping emerald Ali & Bedni plateaus leading beneath Trishul's western icefall",
+      "state": "Uttarakhand",
+      "region": "Chamoli Garhwal",
+      "altitudeM": 4800,
+      "altitudeFt": 15748,
+      "distanceKm": 53,
+      "daysMin": 8,
+      "daysMax": 8,
+      "difficulty": "Difficult",
+      "status": "restricted",
+      "statusNote": "Uttarakhand High Court orders ban overnight camping on alpine bugyals (Ali & Bedni meadows); check modified forest-line itineraries or alternative Ronti Saddle routes before booking.",
+      "bestMonths": ["May", "Jun", "Sep", "Oct"],
+      "shoulderMonths": [],
+      "avoidMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "Jul", "Aug"],
+      "permits": {
+        "required": true,
+        "authority": "Chamoli Forest Division / DM Office",
+        "indianFeeInr": 600,
+        "foreignFeeInr": 1200,
+        "notes": "Strict environmental limits restrict camping near high meadows above treeline; operators must obtain zone clearances."
+      },
+      "roadhead": "Lohajung (2,350 m) — ~220 km from Kathgodam / Rishikesh",
+      "nearestRail": "Kathgodam Railway Station (KGM)",
+      "nearestAirport": "Pantnagar / Jolly Grant Dehradun",
+      "highlights": [
+        "India's vastest high-altitude bugyal corridor across Ali & Bedni",
+        "Sheer towering proximity to Mt Trishul (7,120 m) & Nanda Ghunti",
+        "Steep glacial scree & snow chute ascent to 4,800 m glacial tarn",
+        "Stone temple ruins and historic Nanda Raj Jat pilgrimage trail"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Kathgodam to Lohajung", "altitudeM": 2350, "distanceKm": 0 },
+        { "day": 2, "camp": "Lohajung to Didna", "altitudeM": 2450, "distanceKm": 6.5 },
+        { "day": 3, "camp": "Didna to Ali / Forest edge", "altitudeM": 3450, "distanceKm": 9.0 },
+        { "day": 4, "camp": "Ghora Lotani / Patar Nachauni", "altitudeM": 3900, "distanceKm": 8.0 },
+        { "day": 5, "camp": "Patar Nachauni to Bhagwabasa", "altitudeM": 4300, "distanceKm": 5.5 },
+        { "day": 6, "camp": "Roopkund (4,800 m) & back to Bedni/Forest", "altitudeM": 4800, "distanceKm": 11.0 },
+        { "day": 7, "camp": "Return to Wan & Lohajung", "altitudeM": 2350, "distanceKm": 13.0 }
+      ],
+      "operatorCostInr": {
+        "min": 14500,
+        "max": 26000,
+        "yhaiApprox": null,
+        "typical": 18500,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 2200,
+        "stayPerDay": 450,
+        "foodPerDay": 550,
+        "permitTotal": 800,
+        "guidePerDay": 1800,
+        "gearRentalPerDay": 500,
+        "notes": "Complex permit rules & rapid gain above 4,000 m strongly advise an experienced local Lohajung/Wan guide + porter team rather than going solo."
+      },
+      "summary": "Famous for skeletal remains preserved around its high cirque tarn and iconic twin meadows, Roopkund requires careful acclimatization and adherence to strict meadow-preservation laws.",
+      "imageSlug": "roopkund",
+      "sources": ["https://en.wikipedia.org/wiki/Roopkund", "https://www.bikatadventures.com/", "https://trekthehimalayas.com/"]
+    },
+    {
+      "id": "brahmatal",
+      "slug": "brahmatal",
+      "name": "Brahmatal Lake",
+      "tagline": "Quiet winter sanctuary looking eye-level across Trishul & Nanda Ghunti faces",
+      "state": "Uttarakhand",
+      "region": "Bageshwar / Chamoli Garhwal",
+      "altitudeM": 3734,
+      "altitudeFt": 12250,
+      "distanceKm": 24,
+      "daysMin": 6,
+      "daysMax": 6,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Premier winter alternative when higher Chamoli passes close under deep drift.",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar"],
+      "shoulderMonths": ["Apr", "Nov"],
+      "avoidMonths": ["Jun", "Jul", "Aug", "Sep"],
+      "permits": {
+        "required": true,
+        "authority": "Badrinath / Chamoli Forest Checkpost (Lohajung)",
+        "indianFeeInr": 250,
+        "foreignFeeInr": 700,
+        "notes": "Forest & eco-fee collected per entry + per-day tent charge at Lohajung forest beat office."
+      },
+      "roadhead": "Lohajung (2,350 m) via Kathgodam or Rishikesh",
+      "nearestRail": "Kathgodam Railway Station (KGM)",
+      "nearestAirport": "Pantnagar / Jolly Grant Dehradun",
+      "highlights": [
+        "Mirror-still Bekaltal oak forest pool before rising above treeline",
+        "Knife-edge Jhandi Top ridge run directly facing Trishul (7,120 m)",
+        "Frozen Brahmatal alpine amphitheater at 3,420 m",
+        "Oak and burans rhododendron canopies carpeted in powder snow"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Kathgodam/Rishikesh to Lohajung", "altitudeM": 2350, "distanceKm": 0 },
+        { "day": 2, "camp": "Lohajung to Bekaltal", "altitudeM": 2950, "distanceKm": 5.5 },
+        { "day": 3, "camp": "Bekaltal to Brahmatal", "altitudeM": 3420, "distanceKm": 6.5 },
+        { "day": 4, "camp": "Brahmatal Top Summit & return", "altitudeM": 3734, "distanceKm": 6.0 },
+        { "day": 5, "camp": "Brahmatal to Lohajung", "altitudeM": 2350, "distanceKm": 6.0 },
+        { "day": 6, "camp": "Drive to Railhead", "altitudeM": 550, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 4762,
+        "max": 27949,
+        "yhaiApprox": null,
+        "typical": 11250,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures", "Indiahikes", "Trekkers of India"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1600,
+        "stayPerDay": 500,
+        "foodPerDay": 450,
+        "permitTotal": 400,
+        "guidePerDay": 1500,
+        "gearRentalPerDay": 400,
+        "notes": "Microspikes and warm gaiters essential Dec–Mar; rent cleanly at Lohajung/Kathgodam market."
+      },
+      "summary": "Carved along a snow-draped horseshoe ridge opposite the Roopkund massif, Brahmatal pairs sheltered lake camps with exhilarating exposed crest panoramas.",
+      "imageSlug": "brahmatal",
+      "sources": ["https://trekthehimalayas.com/brahmatal-trek", "https://www.bikatadventures.com/", "https://trekbaba.com/"]
+    },
+    {
+      "id": "har-ki-dun",
+      "slug": "har-ki-dun",
+      "name": "Har Ki Dun Valley",
+      "tagline": "Cradle of wooden Garhwali hamlets winding straight toward Swargarohini ice walls",
+      "state": "Uttarakhand",
+      "region": "Tons Valley, Govind National Park",
+      "altitudeM": 3566,
+      "altitudeFt": 11700,
+      "distanceKm": 42,
+      "daysMin": 7,
+      "daysMax": 7,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Well-suited to endurance beginners willing to walk consecutive 10–12 km valley stages.",
+      "bestMonths": ["Apr", "May", "Jun", "Sep", "Oct", "Nov"],
+      "shoulderMonths": ["Mar", "Dec"],
+      "avoidMonths": ["Jul", "Aug", "Jan", "Feb"],
+      "permits": {
+        "required": true,
+        "authority": "Govind Pashu Vihar National Park",
+        "indianFeeInr": 300,
+        "foreignFeeInr": 900,
+        "notes": "Park entry permit obtained at Sankri/Naitwar barrier; mandatory trekking guide/local check-in."
+      },
+      "roadhead": "Sankri / Taluka (2,100 m)",
+      "nearestRail": "Dehradun Railway Station",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Century-old timber villages of Osla & Gangad with terraced millets",
+        "Parallel glacier-fed Supin and Ruinsara river valleys",
+        "Face-to-face silhouette of Swargarohini (I–IV) looming over the bowl",
+        "Rich alpine birds & occasional side-excursion to Marinda Tal"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Dehradun to Sankri", "altitudeM": 1950, "distanceKm": 0 },
+        { "day": 2, "camp": "Sankri -> Taluka -> Chilurgad", "altitudeM": 2550, "distanceKm": 8.0 },
+        { "day": 3, "camp": "Chilurgad to Kalkattiyadhaar", "altitudeM": 2950, "distanceKm": 9.0 },
+        { "day": 4, "camp": "Kalkattiyadhaar to Har Ki Dun & back", "altitudeM": 3566, "distanceKm": 11.0 },
+        { "day": 5, "camp": "Descent via Osla village", "altitudeM": 2750, "distanceKm": 7.0 },
+        { "day": 6, "camp": "Return to Taluka & Sankri", "altitudeM": 1950, "distanceKm": 7.0 },
+        { "day": 7, "camp": "Drive to Dehradun", "altitudeM": 640, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 8799,
+        "max": 21500,
+        "yhaiApprox": null,
+        "typical": 13250,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures", "Indiahikes"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1700,
+        "stayPerDay": 550,
+        "foodPerDay": 500,
+        "permitTotal": 400,
+        "guidePerDay": 1500,
+        "gearRentalPerDay": 300,
+        "notes": "Village homestays at Gangad/Osla allow lighter packs than full self-supported tenting in spring/autumn."
+      },
+      "summary": "Steeped in Garhwal legend along the ancient Tons valley, Har Ki Dun rewards steady endurance with dramatic cultural heritage and monumental valley glaciers.",
+      "imageSlug": "har-ki-dun",
+      "sources": ["https://www.bikatadventures.com/", "https://trekthehimalayas.com/"]
+    },
+    {
+      "id": "dayara-bugyal",
+      "slug": "dayara-bugyal",
+      "name": "Dayara Bugyal",
+      "tagline": "Vast undulating Uttarkashi carpet rolling toward Bandarpoonch & Kala Nag",
+      "state": "Uttarakhand",
+      "region": "Uttarkashi Garhwal",
+      "altitudeM": 3654,
+      "altitudeFt": 11988,
+      "distanceKm": 24,
+      "daysMin": 4,
+      "daysMax": 6,
+      "difficulty": "Easy",
+      "status": "open",
+      "statusNote": "Open cleanly spring through deep winter; camping permitted at forest treeline camps (Gui/Chilapada), preserving meadows.",
+      "bestMonths": ["Apr", "May", "Jun", "Sep", "Oct", "Nov", "Dec"],
+      "shoulderMonths": ["Jan", "Feb", "Mar"],
+      "avoidMonths": ["Jul", "Aug"],
+      "permits": {
+        "required": true,
+        "authority": "Uttarkashi Forest Division Checkpost (Raithal / Barsu)",
+        "indianFeeInr": 150,
+        "foreignFeeInr": 600,
+        "notes": "Forest checkpost entry near Raithal/Barsu; overnight pitch prohibited on active upper meadows — stay at forest-edge camps."
+      },
+      "roadhead": "Raithal (2,200 m) or Barsu (2,250 m) — ~185 km from Dehradun",
+      "nearestRail": "Dehradun / Rishikesh",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Kilometers-wide natural alpine downs rising to Bakaria Top (~3,654 m)",
+        "Historic wooden Panchpura bhawans in heritage village Raithal",
+        "Close sunrise sightline onto Srikanth, Jaonli, and Draupadi ka Danda",
+        "Gentle gradient ideal for families & first-time trekkers"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Dehradun to Raithal", "altitudeM": 2200, "distanceKm": 0 },
+        { "day": 2, "camp": "Raithal to Gui Campsite", "altitudeM": 2950, "distanceKm": 5.0 },
+        { "day": 3, "camp": "Gui to Chilapada & Dayara Top loop", "altitudeM": 3654, "distanceKm": 11.0 },
+        { "day": 4, "camp": "Descend via Barsu / Raithal", "altitudeM": 2200, "distanceKm": 8.0 },
+        { "day": 5, "camp": "Drive to Dehradun", "altitudeM": 640, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 4499,
+        "max": 11950,
+        "yhaiApprox": 8500,
+        "typical": 9500,
+        "operatorsSampled": ["YHAI Uttarakhand", "Bikat Adventures", "Trek The Himalayas", "Indiahikes", "Moxtain"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1200,
+        "stayPerDay": 500,
+        "foodPerDay": 450,
+        "permitTotal": 200,
+        "guidePerDay": 1400,
+        "gearRentalPerDay": 300,
+        "notes": "GMVN guest houses & community homestays in Raithal keep base costs super affordable."
+      },
+      "summary": "Arguably India's finest introductory meadow walk: emerald velvet in summer, rust-gold in autumn, and rolling white ski hills from December through February.",
+      "imageSlug": "dayara-bugyal",
+      "sources": ["https://www.yhaindia.org/program-details/1290001/himalayan-dayara-bugyal-trekking-cum-training-expedition-2026-by-uttarakhand-state-branch", "https://trekthehimalayas.com/dayara-bugyal-trek", "https://mountainiax.com/dayara-bugyal-trek-cost-in-2026/"]
+    },
+    {
+      "id": "chopta-chandrashila",
+      "slug": "chopta-chandrashila",
+      "name": "Chopta–Tungnath–Chandrashila (+Deoria Tal)",
+      "tagline": "Forest tarn reflections rising to the world's highest Shiva shrine & a 360-degree summit",
+      "state": "Uttarakhand",
+      "region": "Kedarnath Wildlife Sanctuary, Rudraprayag",
+      "altitudeM": 3680,
+      "altitudeFt": 12073,
+      "distanceKm": 23,
+      "daysMin": 3,
+      "daysMax": 6,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Chopta–Tungnath road can experience black ice / heavy snow closure mid-Jan–Feb; Deoria Tal trail stays crisp most of winter.",
+      "bestMonths": ["Mar", "Apr", "May", "Oct", "Nov"],
+      "shoulderMonths": ["Dec", "Jan", "Feb"],
+      "avoidMonths": ["Jul", "Aug"],
+      "permits": {
+        "required": true,
+        "authority": "Kedarnath Wildlife Sanctuary Checkpost (Sari / Chopta)",
+        "indianFeeInr": 150,
+        "foreignFeeInr": 600,
+        "notes": "Deoria Tal entry & sanctuary trail fees collected at Sari village barrier; drone flights prohibited inside sanctuary."
+      },
+      "roadhead": "Sari / Chopta (2,700 m) — ~205 km from Rishikesh",
+      "nearestRail": "Rishikesh / Haridwar",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Dawn reflection of Chaukhamba I–IV across calm Deoria Tal",
+        "Blooming crimson rhododendron (Burans) tunnels each March–April",
+        "Historic stone temple complex at Tungnath (~3,490 m)",
+        "Wide Garhwal horizon from Chandrashila top (~3,680–4,000 m)"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Rishikesh to Sari village", "altitudeM": 2000, "distanceKm": 0 },
+        { "day": 2, "camp": "Sari to Deoria Tal", "altitudeM": 2400, "distanceKm": 3.0 },
+        { "day": 3, "camp": "Deoria Tal -> Sari -> Baniyakund / Chopta", "altitudeM": 2700, "distanceKm": 12.0 },
+        { "day": 4, "camp": "Chopta -> Tungnath -> Chandrashila -> return", "altitudeM": 3680, "distanceKm": 8.0 },
+        { "day": 5, "camp": "Return drive to Rishikesh", "altitudeM": 372, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 3100,
+        "max": 11700,
+        "yhaiApprox": null,
+        "typical": 10500,
+        "operatorsSampled": ["Trek The Himalayas", "Indiahikes", "Thrillophilia", "TrekBaba"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1200,
+        "stayPerDay": 550,
+        "foodPerDay": 450,
+        "permitTotal": 200,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 250,
+        "notes": "Stone-laid path from Chopta -> Tungnath needs zero technical guide in clear weather; carry microspikes in Dec–Mar snow."
+      },
+      "summary": "Compressed high-reward sanctuary circuit combining a forest mirror lake, ancient stone architecture, and big Kedar–Garhwal summits on a paved-then-alpine trail.",
+      "imageSlug": "chopta-chandrashila",
+      "sources": ["https://trekthehimalayas.com/chopta-chandrashila-deoria-tal-trek", "https://en.wikipedia.org/wiki/Tungnath", "https://trekbaba.com/"]
+    },
+    {
+      "id": "sandakphu",
+      "slug": "sandakphu",
+      "name": "Sandakphu & Phalut",
+      "tagline": "Binational tea-house ridge gazing directly at Everest, Lhotse, and Sleeping Buddha",
+      "state": "West Bengal",
+      "region": "Singalila National Park, Darjeeling",
+      "altitudeM": 3636,
+      "altitudeFt": 11929,
+      "distanceKm": 68,
+      "daysMin": 6,
+      "daysMax": 7,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Singalila National Park closes annually mid-June to mid-September for wildlife breeding & monsoon; **local guide mandatory for all trekkers**.",
+      "bestMonths": ["Mar", "Apr", "May", "Oct", "Nov", "Dec"],
+      "shoulderMonths": ["Jan", "Feb"],
+      "avoidMonths": ["Jun", "Jul", "Aug", "Sep"],
+      "permits": {
+        "required": true,
+        "authority": "Singalila National Park Entry (Manebhanjan)",
+        "indianFeeInr": 200,
+        "foreignFeeInr": 500,
+        "notes": "Mandatory local guide (~INR 1,200/day shared by group). Trail weaves along Indo-Nepal border ridge — foreign nationals must carry passports & Indian multi-entry visa precautions."
+      },
+      "roadhead": "Manebhanjan (1,920 m) or Sepi — ~95 km from NJP / Siliguri",
+      "nearestRail": "New Jalpaiguri (NJP)",
+      "nearestAirport": "Bagdogra Airport (IXB)",
+      "highlights": [
+        "Sleeping Buddha skyline aligning Kanchenjunga, Pandim, and Kabru peaks",
+        "Rare sightline spanning both Kangchenjunga (East) and Everest–Makalu (West)",
+        "Cozy wooden trekkers' huts & tea houses across Tumling, Kalipokhri, Gurdum",
+        "Red panda & magnolia sanctuary forests"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "NJP to Sepi / Manebhanjan", "altitudeM": 1920, "distanceKm": 0 },
+        { "day": 2, "camp": "Manebhanjan to Tumling / Samanden", "altitudeM": 2970, "distanceKm": 11.0 },
+        { "day": 3, "camp": "Kalipokhri ridge traverse", "altitudeM": 3186, "distanceKm": 12.0 },
+        { "day": 4, "camp": "Sandakphu Summit ridge", "altitudeM": 3636, "distanceKm": 10.0 },
+        { "day": 5, "camp": "Sandakphu to Sabargram / Phalut", "altitudeM": 3600, "distanceKm": 14.0 },
+        { "day": 6, "camp": "Descent via Gorkhey / Srikhola", "altitudeM": 2300, "distanceKm": 13.0 },
+        { "day": 7, "camp": "Sepi to NJP drive", "altitudeM": 120, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 9250,
+        "max": 29999,
+        "yhaiApprox": 9500,
+        "typical": 13400,
+        "operatorsSampled": ["Bikat Adventures", "Indiahikes", "Trek The Himalayas", "YHAI WB Branch"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1200,
+        "stayPerDay": 750,
+        "foodPerDay": 650,
+        "permitTotal": 300,
+        "guidePerDay": 1200,
+        "gearRentalPerDay": 200,
+        "notes": "Splitting the mandatory Singalila guide across 3–4 trekkers keeps tea-house DIY remarkably economical with hot food & beds every night."
+      },
+      "summary": "India's premier tea-house ridge trail and only trek gazing effortlessly onto four of Earth's five highest peaks on clear autumn mornings.",
+      "imageSlug": "sandakphu",
+      "sources": ["https://www.bikatadventures.com/", "https://trekthehimalayas.com/sandakphu-trek", "https://www.yhaindia.org/program-details/2490011/sandakphu-phalut-gurdum-winter-trek-2026-by-west-bengal-state-branch"]
+    },
+    {
+      "id": "goecha-la",
+      "slug": "goecha-la",
+      "name": "Goecha La (Kanchenjunga Viewpoint)",
+      "tagline": "Demanding Eastern Himalayan odyssey face-to-face with Kangchenjunga's southeast wall",
+      "state": "Sikkim",
+      "region": "Khangchendzonga National Park, West Sikkim",
+      "altitudeM": 4940,
+      "altitudeFt": 16207,
+      "distanceKm": 76,
+      "daysMin": 10,
+      "daysMax": 11,
+      "difficulty": "Difficult",
+      "status": "open",
+      "statusNote": "Access restricted beyond Viewpoint 1 (~4,600–4,940 m) under conservation rules; foreign trekkers require Sikkim PAP (minimum 2 persons via registered operator/e-FRRO).",
+      "bestMonths": ["Apr", "May", "Oct", "Nov"],
+      "shoulderMonths": ["Mar"],
+      "avoidMonths": ["Jun", "Jul", "Aug", "Sep", "Dec", "Jan", "Feb"],
+      "permits": {
+        "required": true,
+        "authority": "Khangchendzonga NP + Sikkim Home/Tourism Dept",
+        "indianFeeInr": 650,
+        "foreignFeeInr": 2200,
+        "notes": "Indians: KNP park & camera/camp fee at Yuksom. Foreigners: Sikkim Restricted/Protected Area Permit (PAP) via indianfrro.gov.in + Sikkim Tourism — **solo foreign trekking banned (min 2 + agency guide)**."
+      },
+      "roadhead": "Yuksom (1,780 m) — ~150 km / ~7–8 hr from NJP",
+      "nearestRail": "New Jalpaiguri (NJP)",
+      "nearestAirport": "Bagdogra Airport (IXB)",
+      "highlights": [
+        "UNESCO Khangchendzonga National Park cloud forest and suspension spans",
+        "Alpine dawn ridge panorama at Dzongri Top (4,150 m)",
+        "Mirror stillness at sacred emerald Samiti Lake (4,300 m)",
+        "Up-close vertical grandeur of Kangchenjunga (8,586 m) & Mt Pandim"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "NJP to Yuksom", "altitudeM": 1780, "distanceKm": 0 },
+        { "day": 2, "camp": "Yuksom to Sachen", "altitudeM": 2200, "distanceKm": 8.0 },
+        { "day": 3, "camp": "Sachen to Tshokha", "altitudeM": 3000, "distanceKm": 7.0 },
+        { "day": 4, "camp": "Tshokha to Dzongri", "altitudeM": 4000, "distanceKm": 9.0 },
+        { "day": 5, "camp": "Dzongri Rest & Ridge Top", "altitudeM": 4150, "distanceKm": 4.0 },
+        { "day": 6, "camp": "Dzongri to Thansing", "altitudeM": 3950, "distanceKm": 10.0 },
+        { "day": 7, "camp": "Thansing to Lamuney", "altitudeM": 4150, "distanceKm": 4.0 },
+        { "day": 8, "camp": "Goecha La Viewpoint & back to Thansing", "altitudeM": 4940, "distanceKm": 14.0 },
+        { "day": 9, "camp": "Thansing to Tshokha", "altitudeM": 3000, "distanceKm": 14.0 },
+        { "day": 10, "camp": "Tshokha to Yuksom", "altitudeM": 1780, "distanceKm": 13.0 }
+      ],
+      "operatorCostInr": {
+        "min": 21500,
+        "max": 32000,
+        "yhaiApprox": null,
+        "typical": 22450,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures", "Indiahikes", "Black Yak Expeditions"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1800,
+        "stayPerDay": 450,
+        "foodPerDay": 650,
+        "permitTotal": 900,
+        "guidePerDay": 2200,
+        "gearRentalPerDay": 450,
+        "notes": "Even budget independent teams must register via Yuksom certified local guide + yak/dzomo porter support due to Sikkim conservation law."
+      },
+      "summary": "A monumental 10-day Eastern Himalayan expedition testing steep vertical endurance across monsoon-fed valleys to touch the footsteps of the world's third-highest peak.",
+      "imageSlug": "goecha-la",
+      "sources": ["https://trekthehimalayas.com/goechala-trek", "https://offbeatpeak.com/destination/sikkim/goecha-la-trek/", "https://sikkimtourism.gov.in/pap"]
+    },
+    {
+      "id": "markha-valley",
+      "slug": "markha-valley",
+      "name": "Markha Valley",
+      "tagline": "Rain-shadow Ladakhi barley oasis villages culminating atop 5,260 m Kongmaru La",
+      "state": "Ladakh",
+      "region": "Hemis National Park, Leh",
+      "altitudeM": 5260,
+      "altitudeFt": 17257,
+      "distanceKm": 68,
+      "daysMin": 7,
+      "daysMax": 9,
+      "difficulty": "Moderate-Difficult",
+      "status": "open",
+      "statusNote": "Ladakh demands minimum 48-hour Leh acclimatization prior to trailhead departure; many trekkers now join at Chilling roadhead skipping Gandala.",
+      "bestMonths": ["Jul", "Aug", "Sep"],
+      "shoulderMonths": ["Jun", "Oct"],
+      "avoidMonths": ["Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "permits": {
+        "required": true,
+        "authority": "Hemis National Park / Ladakh Environment & Wildlife Office",
+        "indianFeeInr": 400,
+        "foreignFeeInr": 900,
+        "notes": "Indians require Ladakh Environment fee + Hemis NP daily wildlife ticket (ILP removed for most zones); foreigners need PAP in restricted sectors."
+      },
+      "roadhead": "Chilling / Skiu (~3,200 m) — 65 km southwest of Leh",
+      "nearestRail": "Jammu Tawi / Udhampur",
+      "nearestAirport": "Kushok Bakula Rimpochee Airport, Leh (IXL)",
+      "highlights": [
+        "Teahouse/homestay sleeping warmth inside isolated Markha & Hankar farmhouses",
+        "Rain-shadow clarity during July–August when rest of Himalaya sees heavy rain",
+        "Elevated alpine plateau at Nimaling (4,800 m) beneath Kang Yatse II",
+        "Dizzying prayer-flag crossing over Kongmaru La (5,260 m)"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Leh Acclimatization (mandatory buffer)", "altitudeM": 3500, "distanceKm": 0 },
+        { "day": 2, "camp": "Chilling to Sara/Markha village", "altitudeM": 3750, "distanceKm": 16.0 },
+        { "day": 3, "camp": "Markha to Thachungtse / Hankar", "altitudeM": 4050, "distanceKm": 14.0 },
+        { "day": 4, "camp": "Hankar to Nimaling Plateau", "altitudeM": 4800, "distanceKm": 11.0 },
+        { "day": 5, "camp": "Nimaling -> Kongmaru La -> Chokdo / Shang", "altitudeM": 5260, "distanceKm": 17.0 },
+        { "day": 6, "camp": "Drive to Leh", "altitudeM": 3500, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 19499,
+        "max": 55000,
+        "yhaiApprox": null,
+        "typical": 22500,
+        "operatorsSampled": ["Trek The Himalayas", "Bikat Adventures"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 2400,
+        "stayPerDay": 1500,
+        "foodPerDay": 0,
+        "permitTotal": 400,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 250,
+        "notes": "Village homestays along Chilling–Markha–Hankar charge ~INR 1,400–1,800/night inclusive of dinner, breakfast & packed lunch — eliminating heavy tents until Nimaling parachute camp."
+      },
+      "summary": "Ladakh's iconic summer homestay trek blending Buddhist desert gorges, glacial braids, and a 5,260 m pass overlooking the towering north wall of Kang Yatse.",
+      "imageSlug": "markha-valley",
+      "sources": ["https://www.bikatadventures.com/", "https://leh.nic.in/", "https://trekthehimalayas.com/"]
+    },
+    {
+      "id": "stok-kangri",
+      "slug": "stok-kangri",
+      "name": "Stok Kangri (Closed Reference)",
+      "tagline": "Famous 6,153 m trekking peak in Ladakh — currently CLOSED for ecological recovery",
+      "state": "Ladakh",
+      "region": "Stok Range, Leh",
+      "altitudeM": 6153,
+      "altitudeFt": 20187,
+      "distanceKm": 40,
+      "daysMin": 8,
+      "daysMax": 9,
+      "difficulty": "Very Difficult",
+      "status": "closed",
+      "statusNote": "CLOSED SINCE 2020: Banned indefinitely by Ladakh Administration & ALLTOA to allow glacial and fragile trail recovery. Do NOT book illegal departures; choose Kang Yatse II (6,250 m) or Dzo Jongo instead.",
+      "bestMonths": ["Jul", "Aug", "Sep"],
+      "shoulderMonths": [],
+      "avoidMonths": ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+      "permits": {
+        "required": true,
+        "authority": "IMF (Indian Mountaineering Foundation) + ALLTOA (Currently Suspended)",
+        "indianFeeInr": 0,
+        "foreignFeeInr": 0,
+        "notes": "No active climbing/trekking permits issued as of Nov 2026; listed transparently so planners are not misled by outdated itineraries."
+      },
+      "roadhead": "Stok Village (3,500 m) — 15 km south of Leh",
+      "nearestRail": "Jammu Tawi / Udhampur",
+      "nearestAirport": "Kushok Bakula Rimpochee Airport, Leh (IXL)",
+      "highlights": [
+        "Historical flagship 6,000er south of the Indus Valley",
+        "Crucial conservation case study in halting over-tourism & glacier stress",
+        "Recommended ethical alternatives: Kang Yatse II / Markha / Yunam Peak"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Leh Acclimatization", "altitudeM": 3500, "distanceKm": 0 },
+        { "day": 2, "camp": "Stok to Chang Ma", "altitudeM": 3990, "distanceKm": 6.5 },
+        { "day": 3, "camp": "Chang Ma to Mankorma", "altitudeM": 4330, "distanceKm": 5.5 },
+        { "day": 4, "camp": "Mankorma to Base Camp", "altitudeM": 4980, "distanceKm": 5.0 },
+        { "day": 5, "camp": "Rest & Snow Practice", "altitudeM": 4980, "distanceKm": 2.0 },
+        { "day": 6, "camp": "Summit Attempt Ridge (Historic)", "altitudeM": 6153, "distanceKm": 11.0 },
+        { "day": 7, "camp": "Return to Stok / Leh", "altitudeM": 3500, "distanceKm": 10.0 }
+      ],
+      "operatorCostInr": {
+        "min": 0,
+        "max": 0,
+        "yhaiApprox": null,
+        "typical": 0,
+        "operatorsSampled": ["Closed by ALLTOA & Ladakh Administration"],
+        "priceLabel": "Closed — permits suspended, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 800,
+        "stayPerDay": 1500,
+        "foodPerDay": 500,
+        "permitTotal": 0,
+        "guidePerDay": 0,
+        "gearRentalPerDay": 0,
+        "notes": "Do not attempt unauthorized entry past Mankorma; book licensed Kang Yatse II or Markha circuits instead."
+      },
+      "summary": "Once India's most celebrated 6,153 m climbable peak, Stok Kangri remains closed under joint Ladakh community and administration conservation decrees.",
+      "imageSlug": "stok-kangri",
+      "sources": ["https://leh.nic.in/", "https://www.indmount.org/", "https://trekthehimalayas.com/"]
+    },
+    {
+      "id": "pin-parvati-pass",
+      "slug": "pin-parvati-pass",
+      "name": "Pin Parvati Pass",
+      "tagline": "Gruelling 110 km wilderness crossing linking Kullu's Parvati gorge to Spiti's Pin Valley",
+      "state": "Himachal Pradesh",
+      "region": "Great Himalayan NP & Pin Valley NP",
+      "altitudeM": 5319,
+      "altitudeFt": 17451,
+      "distanceKm": 110,
+      "daysMin": 10,
+      "daysMax": 12,
+      "difficulty": "Very Difficult",
+      "status": "open",
+      "statusNote": "Requires IMF high-pass clearance & full glacial rope/crevasse team; solo trekking strongly discouraged due to crevassed snow bridges & whiteouts above Mantalai.",
+      "bestMonths": ["Jul", "Aug", "Sep"],
+      "shoulderMonths": ["Jun"],
+      "avoidMonths": ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "permits": {
+        "required": true,
+        "authority": "Kullu DDMA / GHNP / Pin Valley NP + IMF",
+        "indianFeeInr": 2500,
+        "foreignFeeInr": 5000,
+        "notes": "Multi-jurisdiction forest/national park entry (~INR 300–500/day tiered tariff), high-pass Kullu DDMA (>15,000 ft) clearance; foreign citizens require Protected Area Permit for Spiti exit."
+      },
+      "roadhead": "Barshaini, Kullu (start) -> Mudh village, Spiti (exit)",
+      "nearestRail": "Chandigarh / Joginder Nagar",
+      "nearestAirport": "Bhuntar (KUU) / Shimla",
+      "highlights": [
+        "Immense 110 km self-contained glacial crossing above 5,300 m",
+        "Natural mud-rock stone bridge spanning the roaring Parvati River (Pandu Pul)",
+        "Sacred glacier lakehead at Mantalai (4,116 m)",
+        "Monsoon greenery fading to rust-purple Spiti canyons at Mudh"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Barshaini to Kheerganga", "altitudeM": 2960, "distanceKm": 12.0 },
+        { "day": 2, "camp": "Kheerganga to Tunda Bhuj", "altitudeM": 3285, "distanceKm": 15.0 },
+        { "day": 3, "camp": "Tunda Bhuj to Thakur Kuan", "altitudeM": 3560, "distanceKm": 12.0 },
+        { "day": 4, "camp": "Thakur Kuan to Odi Thach", "altitudeM": 3800, "distanceKm": 14.0 },
+        { "day": 5, "camp": "Odi Thach to Mantalai Lake", "altitudeM": 4116, "distanceKm": 11.0 },
+        { "day": 6, "camp": "Mantalai to Parvati Base Camp", "altitudeM": 4650, "distanceKm": 11.0 },
+        { "day": 7, "camp": "Pin Parvati Pass (5,319 m) to Wichkurung", "altitudeM": 5319, "distanceKm": 14.0 },
+        { "day": 8, "camp": "Wichkurung to Tiya & Mudh (Spiti)", "altitudeM": 3810, "distanceKm": 21.0 }
+      ],
+      "operatorCostInr": {
+        "min": 25700,
+        "max": 58500,
+        "yhaiApprox": null,
+        "typical": 56000,
+        "operatorsSampled": ["Bikat Adventures", "Trek The Himalayas"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 3500,
+        "stayPerDay": 400,
+        "foodPerDay": 750,
+        "permitTotal": 3000,
+        "guidePerDay": 3000,
+        "gearRentalPerDay": 700,
+        "notes": "Requires experienced glacial guide + porters + technical rope/crampon/ice-axe hardware; DIY cost drops sharply with a 4–6 member experienced rope team."
+      },
+      "summary": "A true Himalayan benchmark expedition bridging humid Kullu forests and stark Tibetan-plateau geology across an exposed glacier saddle above 5,300 m.",
+      "imageSlug": "pin-parvati-pass",
+      "sources": ["https://www.bikatadventures.com/", "https://trekthehimalayas.com/", "https://en.wikipedia.org/wiki/Pin_Parvati_Pass"]
+    },
+    {
+      "id": "buran-ghati",
+      "slug": "buran-ghati",
+      "name": "Buran Ghati",
+      "tagline": "Pabbar alpine lakes culminating in a vertical snow-wall rappel down into Sangla orchards",
+      "state": "Himachal Pradesh",
+      "region": "Pabbar Valley & Kinnaur",
+      "altitudeM": 4572,
+      "altitudeFt": 15000,
+      "distanceKm": 39,
+      "daysMin": 7,
+      "daysMax": 8,
+      "difficulty": "Moderate-Difficult",
+      "status": "open",
+      "statusNote": "Early-season May–Jun departures involve technical fixed-line rappel down the icy Kinnaur wall.",
+      "bestMonths": ["May", "Jun", "Sep", "Oct"],
+      "shoulderMonths": [],
+      "avoidMonths": ["Jul", "Aug", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr"],
+      "permits": {
+        "required": false,
+        "authority": "HP Forest Local Checkpost (Janglik / Barua)",
+        "indianFeeInr": 100,
+        "foreignFeeInr": 100,
+        "notes": "Standard ID entry at Janglik/Sangla exit; carries mandatory group rope & harness team for June cornice."
+      },
+      "roadhead": "Janglik (2,800 m) via Rohru; exit at Barua (Kinnaur)",
+      "nearestRail": "Kalka / Shimla",
+      "nearestAirport": "Shimla Airport (SLV) / Chandigarh",
+      "highlights": [
+        "Wildflower-rich Dayara Thach meadow campsite (~3,375 m)",
+        "Twin waterfall cliff cirque leading to Chandranahan Lake (4,023 m)",
+        "Thrilling fixed-rope descent off Buran Pass cornice in early summer",
+        "Apple orchard villages cascading toward Baspa River at Barua"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Shimla to Janglik", "altitudeM": 2800, "distanceKm": 0 },
+        { "day": 2, "camp": "Janglik to Dayara Thach", "altitudeM": 3375, "distanceKm": 6.5 },
+        { "day": 3, "camp": "Dayara to Litham campsite", "altitudeM": 3570, "distanceKm": 4.5 },
+        { "day": 4, "camp": "Litham to Chandranahan Lake & return", "altitudeM": 4023, "distanceKm": 6.0 },
+        { "day": 5, "camp": "Litham to Dhunda Pass base", "altitudeM": 4080, "distanceKm": 5.0 },
+        { "day": 6, "camp": "Cross Buran Ghati -> Munirang", "altitudeM": 4572, "distanceKm": 11.0 },
+        { "day": 7, "camp": "Munirang to Barua village & drive", "altitudeM": 2000, "distanceKm": 6.0 }
+      ],
+      "operatorCostInr": {
+        "min": 13900,
+        "max": 26000,
+        "yhaiApprox": null,
+        "typical": 17500,
+        "operatorsSampled": ["Bikat Adventures", "Trek The Himalayas", "Indiahikes"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 2100,
+        "stayPerDay": 500,
+        "foodPerDay": 550,
+        "permitTotal": 100,
+        "guidePerDay": 2200,
+        "gearRentalPerDay": 500,
+        "notes": "HRTC buses connect Shimla ISBT to Chirgaon/Rohru cheaply; always include technical harness + rope hire for pass day."
+      },
+      "summary": "A visual kaleidoscope cramming dense oak woods, cascading lake walls, glacier passes, and vertical snow-wall rappelling cleanly inside a single week.",
+      "imageSlug": "buran-ghati",
+      "sources": ["https://www.bikatadventures.com/", "https://trekthehimalayas.com/"]
+    },
+    {
+      "id": "kashmir-great-lakes",
+      "slug": "kashmir-great-lakes",
+      "name": "Kashmir Great Lakes",
+      "tagline": "Three 4,000 m passes threading past Vishansar, Kishansar, Gadsar, Satsar & Gangabal lakes",
+      "state": "Jammu & Kashmir",
+      "region": "Ganderbal Range, Sonamarg to Naranag",
+      "altitudeM": 4203,
+      "altitudeFt": 13789,
+      "distanceKm": 72,
+      "daysMin": 6,
+      "daysMax": 8,
+      "difficulty": "Moderate-Difficult",
+      "status": "open",
+      "statusNote": "Check security advisories before Sonamarg check-in; **only postpaid SIM cards work in J&K** (no mobile coverage once past Shitkadi).",
+      "bestMonths": ["Jul", "Aug", "Sep"],
+      "shoulderMonths": ["Jun"],
+      "avoidMonths": ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May"],
+      "permits": {
+        "required": true,
+        "authority": "J&K Wildlife Protection / Police & Army Registration (Sonamarg)",
+        "indianFeeInr": 200,
+        "foreignFeeInr": 400,
+        "notes": "Original govt photo ID + photocopies mandatory at Shitkadi & Gadsar army checkposts; subject to active security clearance."
+      },
+      "roadhead": "Shitkadi, Sonamarg (2,600 m); exit Naranag (2,250 m)",
+      "nearestRail": "Jammu Tawi / Udhampur",
+      "nearestAirport": "Sheikh ul-Alam Intl Airport, Srinagar (SXR)",
+      "highlights": [
+        "Turquoise glacial basins mirroring Harmukh Peak (5,142 m)",
+        "Three 4,000 m+ pass traverses: Nichnai, Gadsar, and Zaj Pass",
+        "Seven interconnected high tarns across Satsar plateau",
+        "Wildflower shepherd grazing downs beneath dramatic cirque spires"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Srinagar to Shitkadi camp", "altitudeM": 2600, "distanceKm": 0 },
+        { "day": 2, "camp": "Shitkadi to Nichinai", "altitudeM": 3500, "distanceKm": 11.0 },
+        { "day": 3, "camp": "Nichinai -> Nichinai Pass -> Vishansar", "altitudeM": 4000, "distanceKm": 12.0 },
+        { "day": 4, "camp": "Rest / Acclimatization at Vishansar", "altitudeM": 3650, "distanceKm": 3.0 },
+        { "day": 5, "camp": "Gadsar Pass -> Gadsar Lake", "altitudeM": 4203, "distanceKm": 14.0 },
+        { "day": 6, "camp": "Gadsar to Satsar", "altitudeM": 3650, "distanceKm": 9.0 },
+        { "day": 7, "camp": "Zaj Pass -> Gangabal Twin Lakes", "altitudeM": 3950, "distanceKm": 11.0 },
+        { "day": 8, "camp": "Gangabal to Naranag & Srinagar", "altitudeM": 2250, "distanceKm": 15.0 }
+      ],
+      "operatorCostInr": {
+        "min": 12500,
+        "max": 34499,
+        "yhaiApprox": null,
+        "typical": 21000,
+        "operatorsSampled": ["Trekveda", "Moxtain", "Trek The Himalayas", "Bikat Adventures", "Indiahikes"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1500,
+        "stayPerDay": 500,
+        "foodPerDay": 550,
+        "permitTotal": 200,
+        "guidePerDay": 2000,
+        "gearRentalPerDay": 400,
+        "notes": "Requires full self-contained camping + ration/pony hire between Shitkadi and Naranag; Sonamarg Tourist Reception Centre lists local pony/guide tariffs."
+      },
+      "summary": "Unrivaled concentration of jewel-toned glacial tarns across rolling Kashmir meadows when monsoon saturates most of Uttarakhand and Himachal.",
+      "imageSlug": "kashmir-great-lakes",
+      "sources": ["https://trekthehimalayas.com/kashmir-great-lakes-trek", "https://trekbaba.com/trek/kashmir-great-lakes", "https://en.wikipedia.org/wiki/Great_Lakes_Trek"]
+    },
+    {
+      "id": "kuari-pass",
+      "slug": "kuari-pass",
+      "name": "Kuari Pass (Lord Curzon Trail)",
+      "tagline": "Balcony ridge opening direct sightlines onto Nanda Devi, Kamet, and Dronagiri",
+      "state": "Uttarakhand",
+      "region": "Nanda Devi Biosphere Fringe, Joshimath",
+      "altitudeM": 3876,
+      "altitudeFt": 12717,
+      "distanceKm": 30,
+      "daysMin": 5,
+      "daysMax": 6,
+      "difficulty": "Easy-Moderate",
+      "status": "open",
+      "statusNote": "Medical fitness checkup fee (~INR 300) may be checked locally in Joshimath; landslide advisories apply along NH-7 during heavy monsoon.",
+      "bestMonths": ["Dec", "Jan", "Feb", "Mar", "Apr", "May", "Oct", "Nov"],
+      "shoulderMonths": ["Jun", "Sep"],
+      "avoidMonths": ["Jul", "Aug"],
+      "permits": {
+        "required": true,
+        "authority": "Nanda Devi National Park / Joshimath Forest Office",
+        "indianFeeInr": 350,
+        "foreignFeeInr": 900,
+        "notes": "Forest entry + medical check certification required at Joshimath forest office before proceeding to Tugasi."
+      },
+      "roadhead": "Tugasi / Dhak (~2,450 m) near Joshimath",
+      "nearestRail": "Rishikesh / Dehradun",
+      "nearestAirport": "Jolly Grant Airport, Dehradun (DED)",
+      "highlights": [
+        "Grand amphitheater facing Nanda Devi (7,816 m), Dronagiri, Kamet & Chaukhamba",
+        "Golden oak and silver birch canopy over Gulling Top",
+        "High winter ridge crossing between Khullara and Tali Lake",
+        "Optional side traverse across Auli's undulating Gorson Bugyal"
+      ],
+      "elevationProfile": [
+        { "day": 1, "camp": "Dehradun/Rishikesh to Joshimath", "altitudeM": 2040, "distanceKm": 0 },
+        { "day": 2, "camp": "Tugasi to Gulling Top / Khullara", "altitudeM": 3350, "distanceKm": 9.0 },
+        { "day": 3, "camp": "Khullara -> Kuari Pass -> Khullara", "altitudeM": 3876, "distanceKm": 12.0 },
+        { "day": 4, "camp": "Khullara -> Tugasi -> Joshimath", "altitudeM": 2040, "distanceKm": 9.0 },
+        { "day": 5, "camp": "Drive to Dehradun/Rishikesh", "altitudeM": 640, "distanceKm": 0 }
+      ],
+      "operatorCostInr": {
+        "min": 7000,
+        "max": 14000,
+        "yhaiApprox": null,
+        "typical": 9975,
+        "operatorsSampled": ["Bikat Adventures", "Trek The Himalayas", "CosmicScanner", "Trekkaro"],
+        "priceLabel": "approximate, checked Nov 13, 2026"
+      },
+      "diyBudget": {
+        "transportRoundTrip": 1400,
+        "stayPerDay": 550,
+        "foodPerDay": 450,
+        "permitTotal": 400,
+        "guidePerDay": 1500,
+        "gearRentalPerDay": 350,
+        "notes": "Shared Tata Sumo from Haridwar/Rishikesh bus stand to Joshimath (~INR 600–700 each way) plus shared local jeep up to Tugasi trailhead."
+      },
+      "summary": "Explored famously as Lord Curzon's trail in 1905, Kuari Pass rewards first-time winter trekkers with some of the highest uninterrupted 7,000 m+ mountain horizons in India.",
+      "imageSlug": "kuari-pass",
+      "sources": ["https://www.bikatadventures.com/Home/Itinerary/Kuari-pass-trek", "https://trekthehimalayas.com/kuari-pass-trek", "https://www.cosmicscanner.com/post/kuari-pass-trek-cost"]
+    }
+  ]
+}
