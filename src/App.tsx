@@ -1,15 +1,18 @@
-import { lazy, Suspense, useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { Suspense, lazy, useCallback, useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { QualityProvider } from './lib/quality';
-import { useQuality } from './lib/qualityContext';
 import { CompareProvider } from './lib/compareStore';
+import { TrekModalContext } from './lib/trekModalContext';
+import { getTrekBySlug } from './lib/treksData';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { CurtainLoader } from './components/CurtainLoader';
+import { TrekSheetModal } from './components/TrekSheetModal';
 import { CustomCursor } from './components/CustomCursor';
 import { ClickBurstCanvas } from './components/ClickBurstCanvas';
-import HomePage from './pages/HomePage';
+import type { TrekRecord } from './types/trek';
 
-// Route-split subpages keep initial JS well under 200 KB gzipped
+const HomePage = lazy(() => import('./pages/HomePage'));
 const TreksPage = lazy(() => import('./pages/TreksPage'));
 const TrekDetailPage = lazy(() => import('./pages/TrekDetailPage'));
 const PlannerPage = lazy(() => import('./pages/PlannerPage'));
@@ -20,84 +23,77 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const CreditsPage = lazy(() => import('./pages/CreditsPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 
-function RouteLoadingFallback() {
-  return (
-    <div className="page-shell container" style={{ display: 'flex', alignItems: 'center', minHeight: '60vh' }}>
-      <p style={{ color: 'var(--ink-secondary)', fontSize: '0.95rem' }}>Loading Himalayan trail data...</p>
-    </div>
-  );
+function ScrollResetOnRouteChange() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    if (!hash) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  }, [pathname, hash]);
+  return null;
 }
 
-function AppShell() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const { reducedMotion, tier } = useQuality();
-  const [wiping, setWiping] = useState(false);
-
-  // Scroll to hash or top on navigation
-  useEffect(() => {
-    if (location.hash) {
-      const target = document.getElementById(location.hash.slice(1));
-      if (target) {
-        target.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
-        return;
-      }
-    }
-    window.scrollTo(0, 0);
-  }, [location.pathname, location.hash, reducedMotion]);
-
-  const handleRidgeTransition = (to: string) => {
-    if (reducedMotion || tier === 'low') {
-      navigate(to);
-      return;
-    }
-    setWiping(true);
-    window.setTimeout(() => {
-      navigate(to);
-      window.setTimeout(() => setWiping(false), 200);
-    }, 180);
-  };
-
+function PageFallback() {
   return (
-    <>
-      <div className="intro-crest-line" aria-hidden="true" />
-      <div className={`ridge-wipe-overlay${wiping ? ' active' : ''}`} aria-hidden="true" />
-      <CustomCursor />
-      <ClickBurstCanvas />
-      <Navbar onNavigate={handleRidgeTransition} />
-
-      <main id="main-content" tabIndex={-1}>
-        <Suspense fallback={<RouteLoadingFallback />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/treks" element={<TreksPage />} />
-            <Route path="/treks/:slug" element={<TrekDetailPage />} />
-            <Route path="/planner" element={<PlannerPage />} />
-            <Route path="/compare" element={<ComparePage />} />
-            <Route path="/safety" element={<SafetyPage />} />
-            <Route path="/seasons" element={<SeasonsPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/credits" element={<CreditsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="*" element={<HomePage />} />
-          </Routes>
-        </Suspense>
-      </main>
-
-      <Footer />
-    </>
+    <main className="page-main dark pad">
+      <div className="wrap">
+        <p className="micro">LOADING HIMALAYAN ROUTE…</p>
+      </div>
+    </main>
   );
 }
 
 export function App() {
-  const baseName = (import.meta.env.BASE_URL || '/').replace(/\/$/, '') || '/';
+  const baseName = import.meta.env.BASE_URL.replace(/\/$/, '') || '/';
+  const [activeTrek, setActiveTrek] = useState<TrekRecord | null>(null);
+
+  const openTrekSheet = useCallback((trek: TrekRecord) => {
+    setActiveTrek(trek);
+  }, []);
+
+  const openTrekBySlug = useCallback((slug: string) => {
+    const found = getTrekBySlug(slug);
+    if (found) setActiveTrek(found);
+  }, []);
+
+  const closeTrekSheet = useCallback(() => {
+    setActiveTrek(null);
+  }, []);
 
   return (
     <QualityProvider>
       <CompareProvider>
-        <BrowserRouter basename={baseName}>
-          <AppShell />
-        </BrowserRouter>
+        <TrekModalContext.Provider
+          value={{ activeTrek, openTrekSheet, openTrekBySlug, closeTrekSheet }}
+        >
+          <BrowserRouter basename={baseName}>
+            <a className="skip-link" href="#main">
+              Skip to main content
+            </a>
+            <ScrollResetOnRouteChange />
+            <CurtainLoader />
+            <CustomCursor />
+            <ClickBurstCanvas />
+            <Navbar />
+            <Suspense fallback={<PageFallback />}>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/treks" element={<TreksPage />} />
+                <Route path="/treks/:slug" element={<TrekDetailPage />} />
+                <Route path="/planner" element={<PlannerPage />} />
+                <Route path="/compare" element={<ComparePage />} />
+                <Route path="/safety" element={<SafetyPage />} />
+                <Route path="/seasons" element={<SeasonsPage />} />
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/credits" element={<CreditsPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </Suspense>
+            <Footer />
+            <TrekSheetModal />
+          </BrowserRouter>
+        </TrekModalContext.Provider>
       </CompareProvider>
     </QualityProvider>
   );

@@ -2,24 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HIMAVAT — The Descent | Indian Himalaya Field Atlas &amp; Trekking Planner</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0E1113" />
+    <meta name="color-scheme" content="dark light" />
+    <title>HIMAVAT — The Descent | 18 Verified Indian Himalaya Treks</title>
     <meta
       name="description"
-      content="Walk from dawn snow summit to base camp across the Indian Himalayas. Compare 18 verified trails across Uttarakhand, Himachal, Ladakh, Sikkim &amp; Kashmir, plan DIY budgets, and check live permits."
+      content="HIMAVAT — The Descent: 18 verified Indian Himalaya treks with interactive ridge spotlight, WebGL cascade descent, DIY budget planner, normalized elevation comparator, WMS 2024 safety checklist, and procedural terrain."
     />
-    <meta name="theme-color" content="#0B1117" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="HIMAVAT — The Descent | Indian Himalaya Trekking &amp; DIY Planner" />
+    <meta property="og:title" content="HIMAVAT — The Descent | 18 Indian Himalaya Treks" />
     <meta
       property="og:description"
-      content="Scroll-driven field atlas of India's iconic Himalayan treks with honest operator vs DIY cost breakdowns, permit guides, and AMS safety protocols."
+      content="From 5,319 m summit ridge down to forest base camp — 18 verified Indian Himalaya treks, DIY budgets, elevation profiles, and safety planning."
     />
     <meta property="og:image" content="__BASE__images/hero-dawn/1920.webp" />
-    <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/svg+xml" href="__BASE__favicon.svg" />
 
-    <!-- Preload ONLY the headline font per specification -->
     <link
       rel="preload"
       as="font"
@@ -36,98 +35,83 @@
       fetchpriority="high"
     />
 
-    <!-- Self-hosted subset fonts with font-display: swap and exact subpath resolution -->
-    <style>
-      @font-face {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url('__BASE__fonts/montserrat-700.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap;
-        src: url('__BASE__fonts/montserrat-900.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'Cormorant Garamond';
-        font-style: italic;
-        font-weight: 400;
-        font-display: swap;
-        src: url('__BASE__fonts/cormorant-400i.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'Cormorant Garamond';
-        font-style: italic;
-        font-weight: 600;
-        font-display: swap;
-        src: url('__BASE__fonts/cormorant-600i.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap;
-        src: url('__BASE__fonts/dm-sans-400.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap;
-        src: url('__BASE__fonts/dm-sans-500.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'DM Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap;
-        src: url('__BASE__fonts/dm-sans-700.woff2') format('woff2');
-      }
-      @font-face {
-        font-family: 'Montserrat Fallback';
-        src: local('Liberation Sans Bold'), local('DejaVu Sans Bold'), local('Arial Black'), local('Helvetica Bold');
-        size-adjust: 109%;
-        ascent-override: 96%;
-        descent-override: 24%;
-      }
-      @font-face {
-        font-family: 'DM Sans Fallback';
-        src: local('Liberation Sans'), local('DejaVu Sans'), local('Arial'), local('Helvetica');
-        size-adjust: 101%;
-        ascent-override: 95%;
-        descent-override: 25%;
-      }
-      @font-face {
-        font-family: 'Cormorant Fallback';
-        src: local('Liberation Serif Italic'), local('DejaVu Serif Italic'), local('Georgia Italic'), local('Times New Roman Italic');
-        size-adjust: 108%;
-        ascent-override: 94%;
-        descent-override: 26%;
-      }
-    </style>
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "HIMAVAT — The Descent",
-        "description": "Zero-commission Indian Himalaya field atlas comparing 18 treks across Uttarakhand, Himachal Pradesh, Ladakh, Sikkim, West Bengal, and Jammu & Kashmir.",
-        "inLanguage": "en-IN"
+        "description": "18 verified Indian Himalaya treks, itemized DIY cost planner, elevation profile comparison, and wilderness safety portal."
       }
     </script>
+
+    <style>
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('__BASE__fonts/montserrat-700.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Montserrat';
+        src: url('__BASE__fonts/montserrat-900.woff2') format('woff2');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Cormorant Garamond';
+        src: url('__BASE__fonts/cormorant-400i.woff2') format('woff2');
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'Cormorant Garamond';
+        src: url('__BASE__fonts/cormorant-600i.woff2') format('woff2');
+        font-weight: 600;
+        font-style: italic;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DM Sans';
+        src: url('__BASE__fonts/dm-sans-400.woff2') format('woff2');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DM Sans';
+        src: url('__BASE__fonts/dm-sans-500.woff2') format('woff2');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DM Sans';
+        src: url('__BASE__fonts/dm-sans-700.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      html {
+        background-color: #0E1113;
+        color: #F2F1ED;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0;
+        background-color: #0E1113;
+        color: #F2F1ED;
+        font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+        overflow-x: hidden;
+      }
+    </style>
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <noscript>
-      <div style="padding:2rem;background:#0e161d;color:#eef2f5;font-family:system-ui,sans-serif">
-        <p><strong>HIMAVAT Field Note:</strong> Interactive WebGL water choreography and the Budget Planner calculator use JavaScript, while all trail routes, safety charts, and permit directories remain readable right below.</p>
-      </div>
-    </noscript>
   </body>
 </html>

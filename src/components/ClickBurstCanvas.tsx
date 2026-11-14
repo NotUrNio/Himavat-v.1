@@ -12,7 +12,7 @@ interface Particle {
   color: string;
 }
 
-const PALETTE = ['#f2f5f7', '#59b3c4', '#df7b42'];
+const PALETTE = ['#FF5A1F', '#FF8A5C', '#F2F1ED'];
 
 export function ClickBurstCanvas() {
   const { tier, reducedMotion } = useQuality();

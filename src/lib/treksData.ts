@@ -129,7 +129,9 @@ export function computeDiyBudget(trek: TrekRecord, input: DiyPlanInput): DiyBrea
     trek.diyBudget.notes,
     groupSize === 1
       ? 'Solo hikers cut local guide and taxi splits dramatically by posting departure dates at roadhead teahouses or joining a 3–4 person carpool from the railhead.'
-      : `Splitting a local guide across ${groupSize} hikers lowers guide overhead to ₹${guidePerPerson.toLocaleString('en-IN')}/person total.`,
+      : !useGuide
+        ? 'Self-guided estimate (₹0 guide fee) — verify local permit and route rules before travel.'
+        : `Splitting a local guide across ${groupSize} hikers lowers guide overhead to ₹${guidePerPerson.toLocaleString('en-IN')}/person total.`,
     trek.permits.required
       ? `Pay official fees directly at ${trek.permits.authority} booths (approx. ₹${trek.permits.indianFeeInr.toLocaleString('en-IN')} Indian) instead of agency markups.`
       : 'No advance wildlife entry fee needed for domestic walkers—carry printed Govt ID copies for roadside police checkposts.',

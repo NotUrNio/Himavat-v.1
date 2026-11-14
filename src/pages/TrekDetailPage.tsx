@@ -1,284 +1,209 @@
-import { useMemo } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Calculator, ExternalLink, MapPin, ShieldAlert, Train, Plane, Navigation } from 'lucide-react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Picture } from '../components/Picture';
 import { ElevationChart } from '../components/ElevationChart';
-import { ScrambleNumber } from '../components/ScrambleNumber';
-import { getTrekBySlug, computeDiyBudget, formatInr } from '../lib/treksData';
+import { useCompare } from '../lib/compareContext';
 import { usePageSeo } from '../lib/seo';
+import {
+  ALL_TREKS,
+  MONTH_FULL_NAMES,
+  TREK_META,
+  formatInr,
+  getTrekBySlug,
+  isGuideCompulsory,
+} from '../lib/treksData';
+import {
+  formatDaysRange,
+  formatOperatorPriceRange,
+  getEffectiveWaypoints,
+} from '../lib/trekHelpers';
 
 export default function TrekDetailPage() {
   const { slug } = useParams<{ slug: string }>();
+  const navigate = useNavigate();
+  const { isSelected, toggleCompare } = useCompare();
+
   const trek = getTrekBySlug(slug);
 
-  const sampleDiy = useMemo(() => {
-    if (!trek) return null;
-    return computeDiyBudget(trek, {
-      groupSize: 2,
-      month: trek.bestMonths[0] ?? 'Oct',
-      hireGuide: true,
-      rentGear: false,
-    });
-  }, [trek]);
-
-  const jsonLd = useMemo(() => {
-    if (!trek) return null;
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'TouristTrip',
-      name: `${trek.name} Trek Guide`,
-      description: trek.summary,
-      touristType: trek.difficulty,
-      itinerary: {
-        '@type': 'ItemList',
-        itemListElement: trek.elevationProfile.map((w, idx) => ({
-          '@type': 'ListItem',
-          position: idx + 1,
-          name: `Day ${w.day}: ${w.camp} (${w.altitudeM} m)`,
-        })),
-      },
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'INR',
-        lowPrice: trek.operatorCostInr.min,
-        highPrice: trek.operatorCostInr.max,
-      },
-    };
-  }, [trek]);
-
   usePageSeo({
-    title: trek ? `${trek.name} (${trek.altitudeM} m) | HIMAVAT Trail Guide` : 'Trek Not Found | HIMAVAT',
+    title: trek ? `${trek.name} (${trek.altitudeM} m) | HIMAVAT` : 'Route Not Found | HIMAVAT',
     description: trek
-      ? `${trek.name} in ${trek.state}: altitude ${trek.altitudeM} m, ${trek.daysMax} days, ${trek.difficulty}, permit rules, roadhead logistics, and DIY vs commercial operator comparison.`
-      : 'Trail dossier could not be located.',
-    jsonLdId: 'trek-detail-jsonld',
-    jsonLd,
+      ? `${trek.name} in ${trek.region}, ${trek.state}: ${trek.altitudeM} m, ${formatDaysRange(trek.daysMin, trek.daysMax)}, permit rules, elevation waypoints, and DIY budget.`
+      : 'Himalayan route directory.',
   });
 
-  if (!trek || !sampleDiy) {
+  if (!trek) {
     return (
-      <div className="page-shell container">
-        <h1>Trail Not Found</h1>
-        <p style={{ color: 'var(--ink-secondary)' }}>Return to the verified trail directory to pick another Indian Himalayan route.</p>
-        <Link to="/treks" className="btn btn-primary">Back to All 18 Treks</Link>
-      </div>
+      <main id="main" className="page-main light pad">
+        <div className="wrap">
+          <p className="micro">404 — TRAIL NOT INDEXED</p>
+          <h2>TREK NOT FOUND</h2>
+          <p style={{ margin: '16px 0 24px' }}>
+            We could not match that trail slug in our 18 verified Indian Himalaya routes.
+          </p>
+          <Link to="/treks" className="btn btn-solid">
+            <span>VIEW ALL 18 TREKS →</span>
+          </Link>
+        </div>
+      </main>
     );
   }
 
+  const index = ALL_TREKS.findIndex((t) => t.slug === trek.slug);
+  const prevTrek = ALL_TREKS[(index - 1 + ALL_TREKS.length) % ALL_TREKS.length];
+  const nextTrek = ALL_TREKS[(index + 1) % ALL_TREKS.length];
+
+  const waypoints = getEffectiveWaypoints(trek);
+  const guideMandatory = isGuideCompulsory(trek);
+  const compared = isSelected(trek.slug);
+
   return (
-    <div style={{ paddingTop: 'var(--nav-height)' }}>
-      {/* Hero Banner */}
-      <section style={{ position: 'relative', minHeight: '58svh', display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
-        <div className="stage-backdrop" style={{ inset: 0 }}>
-          <Picture
-            slug={trek.imageSlug}
-            alt={`${trek.name} high-altitude landscape in ${trek.region}, ${trek.state}`}
-            sizes="100vw"
-            priority
-          />
-        </div>
-        <div
-          className="stage-scrim"
-          style={{
-            background:
-              'linear-gradient(180deg, rgba(8,13,18,0.35) 0%, rgba(8,13,18,0.68) 60%, #0b1117 100%)',
-          }}
-        />
-        <div className="container stage-foreground" style={{ paddingBlock: 'clamp(2.2rem, 5vw, 3.8rem)' }}>
-          <Link to="/treks" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.86rem', color: 'var(--accent-glacier)', marginBottom: '0.9rem' }}>
-            <ArrowLeft size={15} /> All 18 Trails
-          </Link>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.65rem', alignItems: 'center', marginBottom: '0.5rem' }}>
-            <span className="eyebrow-coord" style={{ color: 'var(--ink-primary)' }}>
-              <MapPin size={14} aria-hidden="true" /> {trek.state} · {trek.region}
-            </span>
-            <span className={`status-badge status-${trek.status}`}>
-              {trek.status === 'open' ? 'Open' : trek.status === 'restricted' ? 'Restricted Access' : 'Closed / Suspended'}
-            </span>
-          </div>
-          <h1 style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4.4rem)' }}>{trek.name}</h1>
-          <p className="font-italic-accent" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.55rem)', color: '#e9ded2', margin: '0.55rem 0 0', maxWidth: '48ch' }}>
+    <main id="main">
+      <section className="dark pad" style={{ paddingTop: '108px', paddingBottom: '48px' }}>
+        <div className="wrap">
+          <p className="micro">
+            <Link to="/treks" style={{ textDecoration: 'underline' }}>← ALL 18 TREKS</Link> · {trek.state.toUpperCase()} · {trek.region.toUpperCase()}
+          </p>
+
+          <h1 style={{ fontSize: 'clamp(2.4rem, 7vw, 5.4rem)', marginBottom: '12px' }}>
+            {trek.name}
+          </h1>
+          <p style={{ maxWidth: '760px', fontSize: '1.12rem', color: '#B9BDB2' }}>
             {trek.tagline}
           </p>
+
+          {trek.statusNote && (
+            <div className="warn" style={{ marginTop: '18px' }}>
+              {trek.statusNote}
+            </div>
+          )}
+
+          <div
+            style={{
+              marginTop: '24px',
+              border: '2px solid var(--line-strong)',
+              overflow: 'hidden',
+              maxHeight: '480px',
+            }}
+          >
+            <Picture
+              slug={trek.imageSlug}
+              alt={`${trek.name}, ${trek.state}`}
+              sizes="(max-width: 1280px) 100vw, 1240px"
+              priority
+              className="pic-cover"
+            />
+          </div>
+
+          <div className="stat-tiles" style={{ marginTop: '20px' }}>
+            <div>
+              <b>{trek.altitudeM.toLocaleString('en-IN')} m</b>
+              <span className="mono">{trek.altitudeFt.toLocaleString('en-IN')} FT MAX ALTITUDE</span>
+            </div>
+            <div>
+              <b>{formatDaysRange(trek.daysMin, trek.daysMax)}</b>
+              <span className="mono">DURATION</span>
+            </div>
+            <div>
+              <b>{trek.distanceKm} km</b>
+              <span className="mono">TOTAL TRAIL DISTANCE</span>
+            </div>
+            <div>
+              <b>{trek.difficulty}</b>
+              <span className="mono">GRADE · {guideMandatory ? 'GUIDE MANDATORY' : 'GUIDE OPTIONAL'}</span>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '20px' }}>
+            <button
+              type="button"
+              className="btn btn-solid"
+              onClick={() => navigate(`/planner?trek=${encodeURIComponent(trek.slug)}`)}
+            >
+              <span>OPEN IN DIY PLANNER →</span>
+            </button>
+            <button
+              type="button"
+              className={`btn${compared ? ' btn-solid' : ''}`}
+              onClick={() => toggleCompare(trek.slug)}
+            >
+              <span>{compared ? '✓ SELECTED FOR COMPARE' : '+ ADD TO COMPARE'}</span>
+            </button>
+            <Link to="/compare" className="btn">
+              <span>GO TO COMPARE MATRIX</span>
+            </Link>
+          </div>
         </div>
       </section>
 
-      <div className="container" style={{ paddingBlock: '2.5rem 5rem', display: 'grid', gap: '2.25rem' }}>
-        {trek.status !== 'open' && (
-          <div className={`advisory-banner${trek.status === 'closed' ? ' advisory-banner--closed' : ''}`} role="alert">
-            <strong style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
-              <ShieldAlert size={17} /> Operational &amp; Regulatory Notice:
-            </strong>{' '}
-            {trek.statusNote}
-          </div>
-        )}
+      <section className="light pad">
+        <div className="wrap">
+          <p className="micro">ELEVATION PROFILE &amp; FIELD LOGISTICS</p>
+          <ElevationChart
+            mode="single"
+            points={waypoints}
+            trekName={trek.name}
+            accentColor="#FF5A1F"
+          />
 
-        {/* Quick Specs Grid */}
-        <section
-          aria-label="Key Metrics"
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '1rem' }}
-        >
-          <div className="surface-panel">
-            <span className="field-label">Peak Elevation</span>
-            <div style={{ fontSize: '1.65rem', fontWeight: 900, marginTop: '0.2rem' }}>
-              <ScrambleNumber value={trek.altitudeM} suffix=" m" />
-            </div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--ink-muted)' }}>{trek.altitudeFt.toLocaleString('en-IN')} ft</span>
-          </div>
-          <div className="surface-panel">
-            <span className="field-label">Trail Distance</span>
-            <div style={{ fontSize: '1.65rem', fontWeight: 900, marginTop: '0.2rem' }}>
-              <ScrambleNumber value={trek.distanceKm} suffix=" km" />
-            </div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--ink-muted)' }}>{trek.daysMin}–{trek.daysMax} days typical</span>
-          </div>
-          <div className="surface-panel">
-            <span className="field-label">Difficulty</span>
-            <div style={{ fontSize: '1.35rem', fontWeight: 900, marginTop: '0.35rem' }}>{trek.difficulty}</div>
-            <span style={{ fontSize: '0.8rem', color: 'var(--ink-muted)' }}>Best: {trek.bestMonths.join(', ')}</span>
-          </div>
-          <div className="surface-panel">
-            <span className="field-label">Commercial Median</span>
-            <div style={{ fontSize: '1.65rem', fontWeight: 900, marginTop: '0.2rem' }}>
-              <ScrambleNumber value={trek.operatorCostInr.typical} prefix="₹" />
-            </div>
-            <span style={{ fontSize: '0.76rem', color: 'var(--ink-muted)' }}>{trek.operatorCostInr.priceLabel}</span>
-          </div>
-        </section>
-
-        {/* Overview + Cost Comparison */}
-        <div className="editorial-split">
-          <section className="surface-panel">
-            <h2 style={{ fontSize: '1.55rem', marginBottom: '0.75rem' }}>Route Character &amp; Highlights</h2>
-            <p style={{ color: 'var(--ink-secondary)', marginTop: 0 }}>{trek.summary}</p>
-            <ul style={{ margin: '1rem 0 0', paddingLeft: '1.2rem', display: 'grid', gap: '0.55rem', color: 'var(--ink-primary)' }}>
-              {trek.highlights.map((h) => (
-                <li key={h}>{h}</li>
-              ))}
-            </ul>
-            <p style={{ marginTop: '1rem', fontSize: '0.86rem', color: 'var(--ink-muted)' }}>
-              <strong>Trail Advisory Note:</strong> {trek.statusNote}
-            </p>
-          </section>
-
-          <section className="surface-panel" style={{ borderColor: 'rgba(113,168,126,0.38)' }}>
-            <span className="eyebrow-coord" style={{ color: 'var(--accent-forest)' }}>BUDGET REALITY CHECK</span>
-            <h2 style={{ fontSize: '1.55rem', margin: '0.35rem 0 0.75rem' }}>Operator vs Independent DIY</h2>
-            <p style={{ fontSize: '0.84rem', color: 'var(--ink-muted)', marginTop: 0 }}>
-              Sample 2-person group with shared guide ({trek.operatorCostInr.priceLabel}):
-            </p>
-
-            <dl style={{ display: 'grid', gap: '0.6rem', margin: '1rem 0' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.4rem' }}>
-                <dt style={{ color: 'var(--ink-secondary)' }}>DIY Est. (Per Person)</dt>
-                <dd style={{ margin: 0, fontWeight: 800, color: 'var(--accent-forest)' }}>{formatInr(sampleDiy.diyTotalPerPerson)}</dd>
-              </div>
-              {trek.operatorCostInr.yhaiApprox && (
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.4rem' }}>
-                  <dt style={{ color: 'var(--ink-secondary)' }}>YHAI National Program</dt>
-                  <dd style={{ margin: 0, fontWeight: 700 }}>{formatInr(trek.operatorCostInr.yhaiApprox)}</dd>
-                </div>
-              )}
-              <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.4rem' }}>
-                <dt style={{ color: 'var(--ink-secondary)' }}>Operator Package Range</dt>
-                <dd style={{ margin: 0, fontWeight: 700 }}>
-                  {formatInr(trek.operatorCostInr.min)} – {formatInr(trek.operatorCostInr.max)}
-                </dd>
-              </div>
-              <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <dt style={{ color: 'var(--ink-secondary)' }}>Estimated DIY Savings</dt>
-                <dd style={{ margin: 0, fontWeight: 800, color: 'var(--accent-dawn)' }}>
-                  {sampleDiy.savingsVsTypical > 0 ? `${formatInr(sampleDiy.savingsVsTypical)} (${sampleDiy.savingsPct}%)` : 'Comparable on subsidized govt quota'}
-                </dd>
-              </div>
-            </dl>
-
-            <Link to={`/planner?trek=${trek.slug}`} className="btn btn-primary" style={{ width: '100%' }}>
-              <Calculator size={16} /> Customize Group &amp; Month in DIY Planner
-            </Link>
-          </section>
-        </div>
-
-        {/* Interactive Elevation Chart + Itinerary Table */}
-        <section className="surface-panel" aria-labelledby="elev-head">
-          <h2 id="elev-head" style={{ fontSize: '1.55rem', marginBottom: '0.45rem' }}>Daily Elevation Profile</h2>
-          <p style={{ margin: '0 0 1.25rem', fontSize: '0.88rem', color: 'var(--ink-secondary)' }}>
-            Hover or focus any camp node to verify daily sleeping altitude and stage distance.
-          </p>
-          <ElevationChart points={trek.elevationProfile} trekName={trek.name} />
-
-          <div className="table-scroll" style={{ marginTop: '1.5rem' }}>
-            <table className="data-table">
-              <thead>
-                <tr>
-                  <th>Day</th>
-                  <th>Stage / Camp</th>
-                  <th>Altitude (m)</th>
-                  <th>Walk Distance</th>
-                </tr>
-              </thead>
-              <tbody>
-                {trek.elevationProfile.map((w) => (
-                  <tr key={w.day}>
-                    <td><strong>Day {w.day}</strong></td>
-                    <td>{w.camp}</td>
-                    <td className="tabular-nums">{w.altitudeM.toLocaleString('en-IN')} m</td>
-                    <td className="tabular-nums">{w.distanceKm > 0 ? `${w.distanceKm} km` : 'Road Transit'}</td>
-                  </tr>
+          <div className="planner-grid" style={{ marginTop: '24px' }}>
+            <div className="panel panel-filled">
+              <p className="micro">ROUTE OVERVIEW</p>
+              <p style={{ lineHeight: 1.7 }}>{trek.summary}</p>
+              <h3 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase' }}>
+                Key Highlights
+              </h3>
+              <ul style={{ lineHeight: 1.75, paddingLeft: '20px', marginBottom: 0 }}>
+                {trek.highlights.map((h) => (
+                  <li key={h}>{h}</li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+            </div>
+
+            <div className="panel panel-filled">
+              <p className="micro">PERMITS, ACCESS &amp; SEASONS</p>
+              <p style={{ margin: '0 0 10px' }}>
+                <strong>Permit Authority:</strong> {trek.permits.authority}
+              </p>
+              <p style={{ margin: '0 0 10px' }}>{trek.permits.notes}</p>
+              <p style={{ margin: '0 0 10px' }}>
+                <strong>Roadhead:</strong> {trek.roadhead}
+                <br />
+                <strong>Nearest Rail:</strong> {trek.nearestRail}
+                <br />
+                <strong>Airport:</strong> {trek.nearestAirport}
+              </p>
+              <p style={{ margin: '0 0 10px' }}>
+                <strong>Best months:</strong>{' '}
+                {trek.bestMonths.map((m) => MONTH_FULL_NAMES[m]).join(', ')}
+              </p>
+              <p style={{ margin: '0 0 6px' }}>
+                <strong>Operator tariff range:</strong> {formatOperatorPriceRange(trek)}{' '}
+                {trek.operatorCostInr.yhaiApprox && `(YHAI ~${formatInr(trek.operatorCostInr.yhaiApprox)})`}
+              </p>
+              <p className="mono" style={{ color: '#4E5358', margin: 0 }}>
+                {trek.operatorCostInr.priceLabel} · {TREK_META.lastChecked}
+              </p>
+            </div>
           </div>
-        </section>
 
-        {/* Permits, Roadhead Logistics & Seasonality */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
-          <section className="surface-panel">
-            <h2 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Permits &amp; Checkposts</h2>
-            <p style={{ margin: '0 0 0.65rem', fontSize: '0.9rem', color: 'var(--ink-secondary)' }}>
-              <strong>Authority:</strong> {trek.permits.authority}
-            </p>
-            <p style={{ margin: '0 0 0.65rem', fontSize: '0.9rem' }}>
-              <strong>Approx. Tariff:</strong> Indian ₹{trek.permits.indianFeeInr.toLocaleString('en-IN')} · Foreign ₹{trek.permits.foreignFeeInr.toLocaleString('en-IN')}
-            </p>
-            <p style={{ margin: 0, fontSize: '0.86rem', color: 'var(--ink-secondary)' }}>{trek.permits.notes}</p>
-          </section>
-
-          <section className="surface-panel">
-            <h2 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Roadhead &amp; Transit Access</h2>
-            <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: '0.6rem', fontSize: '0.9rem' }}>
-              <li style={{ display: 'flex', gap: '0.5rem' }}>
-                <Navigation size={16} style={{ flexShrink: 0, marginTop: 3, color: 'var(--accent-dawn)' }} />
-                <span><strong>Base:</strong> {trek.roadhead}</span>
-              </li>
-              <li style={{ display: 'flex', gap: '0.5rem' }}>
-                <Train size={16} style={{ flexShrink: 0, marginTop: 3, color: 'var(--accent-glacier)' }} />
-                <span><strong>Rail:</strong> {trek.nearestRail}</span>
-              </li>
-              <li style={{ display: 'flex', gap: '0.5rem' }}>
-                <Plane size={16} style={{ flexShrink: 0, marginTop: 3, color: 'var(--accent-forest)' }} />
-                <span><strong>Air:</strong> {trek.nearestAirport}</span>
-              </li>
-            </ul>
-          </section>
-
-          <section className="surface-panel">
-            <h2 style={{ fontSize: '1.3rem', marginBottom: '0.75rem' }}>Verified Public Sources</h2>
-            <p style={{ margin: '0 0 0.6rem', fontSize: '0.84rem', color: 'var(--ink-secondary)' }}>
-              Checked operators: {trek.operatorCostInr.operatorsSampled.join(', ')}.
-            </p>
-            <ul style={{ margin: 0, paddingLeft: '1.1rem', display: 'grid', gap: '0.45rem', fontSize: '0.82rem' }}>
-              {trek.sources.map((url) => (
-                <li key={url}>
-                  <a href={url} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-glacier)', display: 'inline-flex', alignItems: 'center', gap: '0.3rem', wordBreak: 'break-all' }}>
-                    {new URL(url).hostname} <ExternalLink size={12} />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              flexWrap: 'wrap',
+              gap: '12px',
+              marginTop: '32px',
+            }}
+          >
+            <Link to={`/treks/${prevTrek.slug}`} className="btn">
+              <span>← PREV: {prevTrek.name}</span>
+            </Link>
+            <Link to={`/treks/${nextTrek.slug}`} className="btn">
+              <span>NEXT: {nextTrek.name} →</span>
+            </Link>
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }
