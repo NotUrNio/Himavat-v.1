@@ -23,6 +23,7 @@ export function ManifestoSection() {
   const { reducedMotion } = useQuality();
   const { openTrekSheet } = useTrekModal();
 
+  const stripRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLParagraphElement | null>(null);
   const pathRef = useRef<SVGPathElement | null>(null);
   const words = MANIFESTO_TEXT.split(/\s+/);
@@ -90,12 +91,32 @@ export function ManifestoSection() {
           />
         </svg>
 
-        <p style={{ maxWidth: '720px', fontSize: '1.04rem', lineHeight: 1.7 }}>
-          Eighteen routes exclusively across the Indian Himalaya — Uttarakhand, Himachal Pradesh, Sikkim, Ladakh, Kashmir, and West Bengal. Every tariff note clearly separates typical operator quotes from itemized DIY estimates, and every photo is tied to its real Indian Himalayan location.
-        </p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '12px' }}>
+          <p style={{ maxWidth: '720px', fontSize: '1.04rem', lineHeight: 1.7, margin: 0 }}>
+            Eighteen routes exclusively across the Indian Himalaya — Uttarakhand, Himachal Pradesh, Sikkim, Ladakh, Kashmir, and West Bengal. Every tariff note clearly separates typical operator quotes from itemized DIY estimates, and every photo is tied to its real Indian Himalayan location.
+          </p>
+          <div className="carousel-controls">
+            <button
+              type="button"
+              className="btn"
+              aria-label="Scroll photo strip left"
+              onClick={() => stripRef.current?.scrollBy({ left: -320, behavior: reducedMotion ? 'auto' : 'smooth' })}
+            >
+              <span>← PREV</span>
+            </button>
+            <button
+              type="button"
+              className="btn"
+              aria-label="Scroll photo strip right"
+              onClick={() => stripRef.current?.scrollBy({ left: 320, behavior: reducedMotion ? 'auto' : 'smooth' })}
+            >
+              <span>NEXT →</span>
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div className="strip" aria-label="Verified Indian Himalaya field gallery — click a card to open route sheet">
+      <div ref={stripRef} className="strip" aria-label="Verified Indian Himalaya field gallery — click a card to open route sheet">
         {STRIP_CARDS.map((card) => {
           const trek = getTrekBySlug(card.trekSlug);
           return (

@@ -162,6 +162,19 @@
   stroke-linecap: round;
 }
 
+.strip img,
+.hall-track img,
+.hero-stage img {
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 .strip {
   display: flex;
   gap: 18px;

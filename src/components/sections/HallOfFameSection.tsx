@@ -51,6 +51,18 @@ export function HallOfFameSection() {
   }, []);
 
   useEffect(() => {
+    const stopDrag = () => {
+      draggingRef.current.active = false;
+    };
+    window.addEventListener('pointerup', stopDrag);
+    window.addEventListener('pointercancel', stopDrag);
+    return () => {
+      window.removeEventListener('pointerup', stopDrag);
+      window.removeEventListener('pointercancel', stopDrag);
+    };
+  }, []);
+
+  useEffect(() => {
     const mq = marqueeRef.current;
     if (!mq || reducedMotion) return;
 
@@ -82,22 +94,57 @@ export function HallOfFameSection() {
     };
   }, [reducedMotion]);
 
+  const scrollTrackBy = (delta: number) => {
+    trackRef.current?.scrollBy({ left: delta, behavior: reducedMotion ? 'auto' : 'smooth' });
+  };
+
   return (
     <section id="hall" className="dark pad" style={{ paddingBottom: '44px' }}>
       <div className="wrap">
         <p className="micro">04 — SUMMIT HALL OF FAME</p>
-        <h2>DRAG THE RIDGE</h2>
-        <p className="mono" style={{ color: '#B9BDB2' }}>
-          DRAG HORIZONTALLY ↔ · HOVER FOR SECONDARY TERRAIN · CLICK ANY PEAK TO OPEN FIELD SHEET
-        </p>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+            flexWrap: 'wrap',
+            gap: '14px',
+          }}
+        >
+          <div>
+            <h2>DRAG THE RIDGE</h2>
+            <p className="mono" style={{ color: '#B9BDB2', marginBottom: 0 }}>
+              DRAG OR STEP ↔ · HOVER FOR SECONDARY TERRAIN · CLICK ANY PEAK TO OPEN FIELD SHEET
+            </p>
+          </div>
+          <div className="carousel-controls">
+            <button
+              type="button"
+              className="btn"
+              aria-label="Scroll Hall of Fame left"
+              onClick={() => scrollTrackBy(-360)}
+            >
+              <span>← PREV</span>
+            </button>
+            <button
+              type="button"
+              className="btn"
+              aria-label="Scroll Hall of Fame right"
+              onClick={() => scrollTrackBy(360)}
+            >
+              <span>NEXT →</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div
         ref={trackRef}
         className="hall-track"
         tabIndex={0}
-        aria-label="Draggable Himalayan altitude showcase — drag horizontally or use arrow keys"
+        aria-label="Draggable Himalayan altitude showcase — drag horizontally or use prev/next buttons"
         onPointerDown={(e) => {
+          if ((e.target as HTMLElement).closest('button, a')) return;
           const track = trackRef.current;
           if (!track) return;
           draggingRef.current = {
@@ -114,14 +161,10 @@ export function HallOfFameSection() {
         onPointerUp={() => {
           draggingRef.current.active = false;
         }}
-        onPointerCancel={() => {
-          draggingRef.current.active = false;
-        }}
+        onDragStart={(e) => e.preventDefault()}
         onKeyDown={(e) => {
-          const track = trackRef.current;
-          if (!track) return;
-          if (e.key === 'ArrowRight') track.scrollBy({ left: 320, behavior: 'smooth' });
-          if (e.key === 'ArrowLeft') track.scrollBy({ left: -320, behavior: 'smooth' });
+          if (e.key === 'ArrowRight') scrollTrackBy(320);
+          if (e.key === 'ArrowLeft') scrollTrackBy(-320);
         }}
       >
         {sortedTreks.map((trek) => {

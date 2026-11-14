@@ -191,8 +191,83 @@ void main() {
 `;
 
 export function DescentCanvas({ progressRef, velocityRef }: DescentCanvasProps) {
-  const { webglAllowed, tier } = useQuality();
+  const { webglAllowed, reducedMotion, tier } = useQuality();
   const hostRef = useRef<HTMLDivElement>(null);
+  const fallbackCanvasRef = useRef<HTMLCanvasElement | null>(null);
+
+  useEffect(() => {
+    if (webglAllowed || reducedMotion) return;
+    const canvas = fallbackCanvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let rafId = 0;
+    let visible = true;
+    const io = new IntersectionObserver(
+      (entries) => {
+        visible = entries.some((e) => e.isIntersecting);
+      },
+      { threshold: 0.05 },
+    );
+    io.observe(canvas);
+
+    const resize = () => {
+      canvas.width = canvas.offsetWidth || window.innerWidth;
+      canvas.height = canvas.offsetHeight || 540;
+    };
+    resize();
+    window.addEventListener('resize', resize, { passive: true });
+
+    const droplets: Array<{ x: number; y: number; vx: number; vy: number; life: number }> = [];
+    const tick = () => {
+      rafId = window.requestAnimationFrame(tick);
+      if (!visible) return;
+
+      const w = canvas.width;
+      const h = canvas.height;
+      ctx.clearRect(0, 0, w, h);
+
+      const vel = Math.abs(velocityRef.current);
+      const count = vel > 4 ? 3 : 1;
+      for (let i = 0; i < count; i++) {
+        if (droplets.length < 90) {
+          droplets.push({
+            x: w * 0.35 + Math.random() * w * 0.3,
+            y: h * 0.78 + Math.random() * 24,
+            vx: (Math.random() - 0.5) * 2.2,
+            vy: -(1.6 + Math.random() * 2.6 + vel * 0.04),
+            life: 1,
+          });
+        }
+      }
+
+      for (let i = droplets.length - 1; i >= 0; i--) {
+        const p = droplets[i];
+        p.x += p.vx;
+        p.y += p.vy;
+        p.vy += 0.1;
+        p.life -= 0.018;
+        if (p.life <= 0) {
+          droplets.splice(i, 1);
+          continue;
+        }
+        ctx.globalAlpha = p.life * 0.7;
+        ctx.fillStyle = '#DCEEF2';
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    };
+    rafId = window.requestAnimationFrame(tick);
+
+    return () => {
+      window.cancelAnimationFrame(rafId);
+      io.disconnect();
+      window.removeEventListener('resize', resize);
+    };
+  }, [webglAllowed, reducedMotion, velocityRef]);
 
   useEffect(() => {
     if (!webglAllowed) return;
@@ -348,16 +423,32 @@ export function DescentCanvas({ progressRef, velocityRef }: DescentCanvasProps) 
     };
   }, [webglAllowed, tier, progressRef, velocityRef]);
 
-  if (!webglAllowed) return null;
+  if (!webglAllowed) {
+    if (reducedMotion) return null;
+    return (
+      <canvas
+        ref={fallbackCanvasRef}
+        aria-hidden="true"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          pointerEvents: 'none',
+        }}
+      />
+    );
+  }
 
   return (
     <div
       ref={hostRef}
       aria-hidden="true"
       style={{
-        position: 'fixed',
+        position: 'absolute',
         inset: 0,
-        zIndex: 4,
+        width: '100%',
+        height: '100%',
         pointerEvents: 'none',
       }}
     />

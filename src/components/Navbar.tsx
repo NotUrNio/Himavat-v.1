@@ -73,13 +73,26 @@ export function Navbar({ onNavigate }: { onNavigate?: (to: string) => void }) {
   }, []);
 
   useEffect(() => {
+    const closeOnPop = () => {
+      setMenuOpen(false);
+      setPreviewSlug(null);
+    };
+    window.addEventListener('popstate', closeOnPop);
+    return () => window.removeEventListener('popstate', closeOnPop);
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', menuOpen);
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && menuOpen) {
         setMenuOpen(false);
       }
     };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    return () => {
+      document.body.classList.remove('menu-open');
+      window.removeEventListener('keydown', onKey);
+    };
   }, [menuOpen]);
 
   const handleToggleAudio = async () => {
@@ -135,18 +148,6 @@ export function Navbar({ onNavigate }: { onNavigate?: (to: string) => void }) {
       <div id="river" aria-hidden="true">
         <div id="riverFill" style={{ height: `${(scrollPct * 100).toFixed(2)}%` }} />
       </div>
-
-      <button
-        type="button"
-        id="quality"
-        className="quality-pill"
-        onClick={cycleQualityTier}
-        title="Adaptive GPU benchmark & live FPS governor — click to override tier"
-      >
-        {autoDowngraded
-          ? `QUALITY: ${detectedTier.toUpperCase()} → ${tierLabel} (${fps} FPS)`
-          : `QUALITY: ${tierLabel}${overrideTier === 'auto' ? ' · AUTO' : ''} · DPR ${dprDisplay} · ${fps} FPS`}
-      </button>
 
       <header className="site" role="banner">
         <div className="brand-group">
@@ -254,9 +255,21 @@ export function Navbar({ onNavigate }: { onNavigate?: (to: string) => void }) {
             </Link>
           </div>
 
-          <p className="mono" style={{ marginTop: '20px', opacity: 0.92 }}>
-            18 VERIFIED TREKS · 25 CURATED IMAGE SETS · PRICES APPROXIMATE, CHECKED 13 NOV 2026
-          </p>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center', marginTop: '20px' }}>
+            <button
+              type="button"
+              className="quality-pill-inline"
+              onClick={cycleQualityTier}
+              title="Click to cycle render quality tier"
+            >
+              {autoDowngraded
+                ? `QUALITY: ${detectedTier.toUpperCase()} → ${tierLabel} (${fps} FPS) — CLICK TO CYCLE`
+                : `QUALITY: ${tierLabel}${overrideTier === 'auto' ? ' · AUTO' : ''} · DPR ${dprDisplay} · ${fps} FPS — CLICK TO CYCLE`}
+            </button>
+            <span className="mono" style={{ opacity: 0.92 }}>
+              18 VERIFIED TREKS · 25 CURATED IMAGE SETS · CHECKED 13 NOV 2026
+            </span>
+          </div>
         </div>
       </nav>
 

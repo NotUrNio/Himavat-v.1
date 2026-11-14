@@ -64,7 +64,8 @@ export default function HomePage() {
         const syncLockState = () => {
           if (
             document.body.classList.contains('locked') ||
-            document.body.classList.contains('sheet-open')
+            document.body.classList.contains('sheet-open') ||
+            document.body.classList.contains('menu-open')
           ) {
             lenis.stop();
           } else {

@@ -7,7 +7,7 @@ import { useTrekModal } from '../../lib/trekModalContext';
 const CURRENT_MONTH = MONTH_LIST[new Date().getMonth()] ?? 'Nov';
 
 export function HeroStageSection() {
-  const { tier, reducedMotion } = useQuality();
+  const { tier, overrideTier, setOverrideTier, fps, reducedMotion } = useQuality();
   const { openTrekSheet } = useTrekModal();
 
   const heroRef = useRef<HTMLElement | null>(null);
@@ -24,9 +24,6 @@ export function HeroStageSection() {
 
   useEffect(() => {
     document.body.classList.toggle('locked', locked);
-    if (locked && heroRef.current) {
-      heroRef.current.scrollIntoView({ behavior: 'smooth' });
-    }
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape' && locked) {
         setLocked(false);
@@ -45,14 +42,15 @@ export function HeroStageSection() {
     const rev = revealRef.current;
     if (!hero || !bg || !rev || reducedMotion) return;
 
+    const rectInit = hero.getBoundingClientRect();
     let mx = 0;
     let my = 0;
     let tx = 0;
     let ty = 0;
-    let px = window.innerWidth / 2;
-    let py = window.innerHeight / 2;
-    let pr = 0;
-    let tr = 0;
+    let px = Math.max(120, rectInit.width / 2);
+    let py = Math.max(120, rectInit.height / 2);
+    let pr = locked ? 185 : 0;
+    let tr = locked ? 185 : 0;
     let rafId = 0;
 
     const tick = () => {
@@ -77,30 +75,50 @@ export function HeroStageSection() {
       tr = radius;
     };
 
-    const onMouseMove = (e: MouseEvent) => handlePointer(e.clientX, e.clientY, locked ? 205 : 135);
-    const onMouseLeave = () => {
-      tr = locked ? 90 : 0;
+    const onPointerMove = (e: PointerEvent) => {
+      handlePointer(e.clientX, e.clientY, locked ? 210 : 140);
     };
-    const onTouchMove = (e: TouchEvent) => {
-      if (e.touches[0]) {
-        handlePointer(e.touches[0].clientX, e.touches[0].clientY, 120);
-      }
+    const onPointerDown = (e: PointerEvent) => {
+      if ((e.target as HTMLElement).closest('button, a')) return;
+      handlePointer(e.clientX, e.clientY, locked ? 210 : 150);
+    };
+    const onPointerLeave = () => {
+      tr = locked ? 160 : 0;
     };
 
-    hero.addEventListener('mousemove', onMouseMove);
-    hero.addEventListener('mouseleave', onMouseLeave);
-    hero.addEventListener('touchmove', onTouchMove, { passive: true });
+    hero.addEventListener('pointermove', onPointerMove);
+    hero.addEventListener('pointerdown', onPointerDown);
+    hero.addEventListener('pointerleave', onPointerLeave);
 
     return () => {
       window.cancelAnimationFrame(rafId);
-      hero.removeEventListener('mousemove', onMouseMove);
-      hero.removeEventListener('mouseleave', onMouseLeave);
-      hero.removeEventListener('touchmove', onTouchMove);
+      hero.removeEventListener('pointermove', onPointerMove);
+      hero.removeEventListener('pointerdown', onPointerDown);
+      hero.removeEventListener('pointerleave', onPointerLeave);
     };
   }, [locked, reducedMotion]);
 
+  const cycleTier = () => {
+    const order: Array<'auto' | 'high' | 'medium' | 'low'> = ['auto', 'high', 'medium', 'low'];
+    const next = order[(order.indexOf(overrideTier) + 1) % order.length];
+    setOverrideTier(next);
+  };
+
+  const toggleLockMode = () => {
+    if (!locked) {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+    setLocked((prev) => !prev);
+  };
+
   return (
-    <section id="hero" ref={heroRef} className="hero-stage" aria-label="Himalayan dawn hero stage">
+    <section
+      id="hero"
+      ref={heroRef}
+      className="hero-stage"
+      aria-label="Himalayan dawn hero stage"
+      style={{ touchAction: locked ? 'none' : 'pan-y' }}
+    >
       <div ref={bgRef} className="hero-bg">
         <Picture
           slug="hero-dawn"
@@ -137,7 +155,14 @@ export function HeroStageSection() {
 
       <div className="hero-top">
         <span className="mono">30.48° N · 79.52° E — GARHWAL &amp; LADAKH HIMALAYA</span>
-        <span className="mono">MOVE CURSOR TO REVEAL NIGHT SKY · {tier.toUpperCase()} TIER</span>
+        <button
+          type="button"
+          className="quality-pill-inline"
+          onClick={cycleTier}
+          title="Click to cycle WebGL / shader quality tier"
+        >
+          QUALITY: {tier.toUpperCase()} ({overrideTier === 'auto' ? 'AUTO' : 'MANUAL'}) · {fps} FPS · CYCLE ↻
+        </button>
       </div>
 
       <h1 className="hero-word">
@@ -156,7 +181,7 @@ export function HeroStageSection() {
 
         {locked && (
           <span className="locked-note mono">
-            LOCK MODE — MOVE OR DRAG TO EXPLORE NIGHT RIDGES · ESC TO UNLOCK
+            LOCK MODE ACTIVE — MOVE OR DRAG TO REVEAL NIGHT SKY · ESC TO UNLOCK
           </span>
         )}
 
@@ -164,7 +189,7 @@ export function HeroStageSection() {
           type="button"
           className="btn btn-solid"
           aria-pressed={locked}
-          onClick={() => setLocked((prev) => !prev)}
+          onClick={toggleLockMode}
         >
           <span>{locked ? 'BACK TO SCROLL' : 'TAP TO LOCK'}</span>
         </button>

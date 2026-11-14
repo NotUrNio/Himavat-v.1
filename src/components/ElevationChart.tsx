@@ -127,7 +127,7 @@ export function ElevationChart(props: ElevationChartProps) {
           <text x={padL + plotW / 2} y={height - 10} textAnchor="middle" fontSize="11" fill="#8a99a8">Mid-Trek Progress (50%)</text>
           <text x={width - padR} y={height - 10} textAnchor="end" fontSize="11" fill="#8a99a8">Route Finish (100%)</text>
         </svg>
-        <figcaption style={{ display: 'flex', flexWrap: 'wrap', gap: '1.2rem', marginTop: '0.75rem', fontSize: '0.84rem', color: 'var(--ink-secondary)' }}>
+        <figcaption style={{ display: 'flex', flexWrap: 'wrap', gap: '1.2rem', marginTop: '0.75rem', fontSize: '0.84rem', color: 'var(--text-secondary)' }}>
           {compareData.paths.map((p) => (
             <span key={p.trek.slug} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.45rem' }}>
               <span style={{ width: 12, height: 12, borderRadius: 99, background: p.color, display: 'inline-block' }} />
@@ -185,6 +185,7 @@ export function ElevationChart(props: ElevationChartProps) {
               onMouseEnter={() => setHoverIdx(c.idx)}
               onMouseLeave={() => setHoverIdx(null)}
               onFocus={() => setHoverIdx(c.idx)}
+              onClick={() => setHoverIdx((prev) => (prev === c.idx ? null : c.idx))}
               tabIndex={0}
               style={{ cursor: 'pointer', outline: 'none' }}
               aria-label={`Day ${c.day}: ${c.camp}, ${c.altitudeM} meters`}

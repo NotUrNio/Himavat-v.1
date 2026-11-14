@@ -81,10 +81,12 @@ export function CompareSection() {
       </div>
 
       {compareSeries.length >= 1 && (
-        <ElevationChart
-          mode="compare"
-          series={compareSeries}
-        />
+        <div className="elevation-chart-card">
+          <ElevationChart
+            mode="compare"
+            series={compareSeries}
+          />
+        </div>
       )}
 
       <div style={{ overflowX: 'auto', marginTop: '18px' }}>

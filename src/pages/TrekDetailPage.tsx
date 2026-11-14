@@ -138,12 +138,14 @@ export default function TrekDetailPage() {
       <section className="light pad">
         <div className="wrap">
           <p className="micro">ELEVATION PROFILE &amp; FIELD LOGISTICS</p>
-          <ElevationChart
-            mode="single"
-            points={waypoints}
-            trekName={trek.name}
-            accentColor="#FF5A1F"
-          />
+          <div className="elevation-chart-card">
+            <ElevationChart
+              mode="single"
+              points={waypoints}
+              trekName={trek.name}
+              accentColor="#FF5A1F"
+            />
+          </div>
 
           <div className="planner-grid" style={{ marginTop: '24px' }}>
             <div className="panel panel-filled">

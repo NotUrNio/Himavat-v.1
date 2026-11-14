@@ -21,6 +21,7 @@ export function BudgetPlannerSection({ initialSlug }: { initialSlug?: string }) 
   const [rentGear, setRentGear] = useState(true);
   const [bufferPercent, setBufferPercent] = useState(12);
   const [month, setMonth] = useState<MonthCode>(DEFAULT_MONTH);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -74,11 +75,24 @@ export function BudgetPlannerSection({ initialSlug }: { initialSlug?: string }) 
     [plan, rentGear],
   );
 
+  const summaryText = `HIMAVAT DIY Budget — ${trek.name} (${formatDaysRange(trek.daysMin, trek.daysMax)}, ${groupSize} hiker${groupSize === 1 ? '' : 's'}, ${MONTH_FULL_NAMES[month]}): ${formatInr(totalWithBuffer)}/person (incl. ${bufferPercent}% buffer) | Base ex-buffer: ${formatInr(plan.diyTotalPerPerson)} | Group total: ${formatInr(totalWithBuffer * groupSize)}`;
+
   const mailtoHref = `mailto:?subject=${encodeURIComponent(
     `HIMAVAT DIY Budget — ${trek.name}`,
   )}&body=${encodeURIComponent(
-    `DIY per-person estimate (incl. ${bufferPercent}% buffer): ${formatInr(totalWithBuffer)} for ${trek.name} (${formatDaysRange(trek.daysMin, trek.daysMax)}, group of ${groupSize}, ${MONTH_FULL_NAMES[month]}). Base cost ex-buffer: ${formatInr(plan.diyTotalPerPerson)}. Prices approximate, verified Nov 2026.`,
+    `${summaryText}. Prices approximate, verified Nov 2026.`,
   )}`;
+
+  const copySummary = async () => {
+    try {
+      await navigator.clipboard.writeText(summaryText);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 2200);
+    } catch {
+      // Fallback via prompt if clipboard API blocked
+      window.prompt('Copy your budget estimate:', summaryText);
+    }
+  };
 
   return (
     <div className="wrap">
@@ -268,11 +282,14 @@ export function BudgetPlannerSection({ initialSlug }: { initialSlug?: string }) 
             ))}
           </ul>
 
-          <p style={{ marginBottom: 0 }}>
-            <a className="btn btn-solid" href={mailtoHref}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', marginTop: '14px' }}>
+            <button type="button" className="btn btn-solid" onClick={copySummary}>
+              <span>{copied ? '✓ COPIED TO CLIPBOARD' : 'COPY ESTIMATE'}</span>
+            </button>
+            <a className="btn" href={mailtoHref}>
               <span>EMAIL THIS ESTIMATE →</span>
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </div>

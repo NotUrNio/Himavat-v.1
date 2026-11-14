@@ -103,12 +103,14 @@ export function TrekSheetModal() {
           </p>
         )}
 
-        <ElevationChart
-          mode="single"
-          points={waypoints}
-          trekName={activeTrek.name}
-          accentColor="#FF5A1F"
-        />
+        <div className="elevation-chart-card">
+          <ElevationChart
+            mode="single"
+            points={waypoints}
+            trekName={activeTrek.name}
+            accentColor="#FF5A1F"
+          />
+        </div>
 
         <div
           style={{
